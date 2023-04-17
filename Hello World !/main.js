@@ -1,5 +1,4 @@
 
-//new comment
 const message = document.getElementById("message");
 message.addEventListener("click",onClick);
 message.innerHTML="Hello World!"
