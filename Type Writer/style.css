@@ -1,0 +1,35 @@
+html,body {
+    background-color: black;
+  }
+  
+#introDiv {
+    width: 50%;
+    color:limegreen;
+    font-size: larger;
+    font-family: Verdana;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    line-height: 40px;
+     /* Move the div back up and to the left by 50% of its height and width */
+    transform: translate(-50%, -50%);   
+}  
+
+#introDiv::after {
+    content: "|";
+    animation: blink 0.9s infinite;
+  }
+
+   /*Blinking Animation*/
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+ 
