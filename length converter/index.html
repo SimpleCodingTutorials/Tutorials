@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Length Converter</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="input-container">
+            <h2>Length Converter</h2>
+            <div>
+                <label for="meter">Meters</label>
+                <input type="number" step="0.01" min="0" id="meter" oninput="convert('meter')"  />
+            </div>
+            <div>
+                <label for="yard">Yards:</label>
+                <input type="number" step="0.01" min="0" id="yard" oninput="convert('yard')" />
+            </div>
+            <div>
+                <label for="foot">Feet:</label>
+                <input type="number" step="0.01" min="0" id="foot" oninput="convert('foot')" />
+            </div>
+            <div>
+                <label for="inch">Inches:</label>
+                <input type="number" step="0.01" min="0" id="inch" oninput="convert('inch')" />
+            </div>
+            <div>
+                <label for="mile">Miles:</label>
+                <input type="number" step="0.01" min="0" id="mile" oninput="convert('mile')" />
+            </div>
+            <input type="button" id="reset" onclick="reset()" value="Reset"/>
+        </div>
+        <script src="main.js"></script>
+    </body>
+
+    </html>
