@@ -1,0 +1,101 @@
+html,body {
+  height: 100%;
+}
+@font-face {
+  font-family: DigitalFont;
+  src:url("alarm clock.ttf")
+}
+#stopWatch {
+  font-family: DigitalFont;
+  color:#3dcaf9;
+  font-size: 48px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:30.8vw;
+  height: 50vw;
+  position: relative;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background: url("sw.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#displayScreen {
+  width:50%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+#startTimer {
+  background-color: transparent;
+  background-image: url("play.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 6%;
+  height: 6%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  top:27%;
+  left:55%;
+  transform: translate(10%,10%);
+}
+#stopTimer {
+  background-color: transparent;
+  background-image: url("pause.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 6%;
+  height: 6%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  top:27%;
+  left:65%;
+  transform: translate(10%,10%);
+}
+#resetTimer {
+  background-color: transparent;
+  background-image: url("reset.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 6%;
+  height: 6%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  top:27%;
+  left:75%;
+  transform: translate(10%,10%);
+}
+@media screen and (max-width:1920px){
+  #stopWatch {
+    font-size: 80px;
+  }
+}
+@media screen and (max-width:1280px){
+  #stopWatch {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width:1024px){
+  #stopWatch {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width:800px){
+  #stopWatch {
+    font-size: 30px;
+  }
+}
