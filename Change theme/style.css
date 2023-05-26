@@ -1,0 +1,123 @@
+/* Default theme */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  color: #333;
+}
+#logo {
+  height: 50px;
+  border-radius: 50%;
+}
+h1 {
+  color: #333;
+}
+/* Menu styles */
+nav {
+  background-color: #ebebeb;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin-right: 20px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.5s ease-out;
+}
+
+a:hover {
+  color: green;
+}
+/* Header styles */
+header {
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 50px 20px;
+  text-align: center;
+}
+/* Footer styles */
+footer {
+  background-color: #ebebeb;
+  color: black;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  margin-top: auto;
+}
+footer p {
+  margin: 0;
+  line-height: 100px;
+}
+/* -------------------------------------------------------------- */
+/*Dark Theme*/
+body.dark {
+  background-color: #333;
+}
+.dark {
+  color: whitesmoke;
+}
+nav.dark,
+footer.dark {
+  background-color: black;
+}
+a.dark:hover {
+  color: darkgreen;
+}
+header.dark {
+  background-color: darkgreen;
+}
+/*-------------------------------------------*/
+/*Slider Button*/
+.slider {
+  width: 70px;
+  height: 34px;
+  position: relative;
+  margin: 0;
+  display: flex;
+  vertical-align: middle;
+  background-color: green;
+  border-radius: 34px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background-image: url(sun.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-position-x: 92%;
+}
+.slider:before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  position: relative;
+  left: -5px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s;
+}
+/*Dark Theme Slider Button*/
+.slider.dark {
+  background-color: rgb(77, 76, 76);
+  background-image: url(moon.png);
+  background-position: left;
+  background-repeat: no-repeat;
+}
+.slider.dark:before {
+  background-color: darkgray;
+  transform: translateX(38px);
+}
