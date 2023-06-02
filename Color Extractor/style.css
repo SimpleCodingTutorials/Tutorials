@@ -1,0 +1,13 @@
+.container{
+    position: absolute;
+    top:50%;
+    left:40%;
+    transform: translate(-50%,-50%);
+}
+.canvasContainer{
+    display: flex;
+    cursor: pointer;
+}
+#imageFile{
+    font-size: 25px;
+}
