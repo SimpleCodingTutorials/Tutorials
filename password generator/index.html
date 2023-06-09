@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Strong Password Generator</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="input-container">
+            <h2>Generate Password</h2>
+            <div>
+                <label>Password</label>
+                <textarea id="password"></textarea>
+                <button id="copy"><i class="fa fa-copy"></i></button>
+            </div>
+            <div>
+                <input type="range" step="1" min="8" max="100" value="8" id="passwordLength" oninput="showValue(this.value)"/>
+                <span id="lengthLabel">Length:8</span>
+            </div>
+            <button id="btnGeneratePassword">Generate Password</button>
+        </div>
+        <div id="alert">
+            <p><i class="fa fa-check-circle"></i> Copied to clipboard</p>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+
+    </html>

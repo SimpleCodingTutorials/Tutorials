@@ -1,0 +1,122 @@
+body{
+  font-family: arial;
+  margin:0;
+  padding:0;
+  display: flex;
+  min-height: 100vh;
+  font-weight: bold;
+}
+.input-container {
+  border:1px solid #ccc;
+  border-radius: 10px;
+  padding:20px;
+  text-align: center;
+  margin:0 auto;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-image: linear-gradient(to bottom right,#fff,#bad3ff);
+}
+.input-container h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+  height: 50px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+  padding: 10px;
+  margin-left: -20px;
+  margin-right: -20px;
+  background-image: linear-gradient(to right,#241e85,#408ce9);
+}
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:80px;
+  color:whitesmoke;
+  text-align: left;
+  background-color: #408ce9;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding:4px;
+}
+input {
+  width:250px;
+  height: 10px;
+  border: none;
+}
+#password {
+  width:250px;
+  height:70px;
+  resize: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius:10px ;
+  color:darkblue;
+}
+#lengthLabel {
+  color: darkblue;
+  margin-left: 10px;
+  width:60px;
+}
+.input-container div {
+  display: flex;
+  margin-bottom: 15px;
+}
+#btnGeneratePassword {
+  width:190px;
+  height:40px;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  color:darkblue;
+  background-color: white;
+}
+#copy{
+  height:20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+#copy:hover {
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#alert {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: whitesmoke;
+  background-color: #29292c;
+  font-weight: bold;
+  width:35vw;
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  font-size: small;
+  display: none;
+}
