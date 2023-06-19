@@ -1,0 +1,16 @@
+#canvas{
+    height:300px;
+    width:600px;
+}
+.container{
+    display: flex;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    flex-direction: column;
+}
+#imageFile{
+    margin-top:10px;
+    font-size:25px;
+}
