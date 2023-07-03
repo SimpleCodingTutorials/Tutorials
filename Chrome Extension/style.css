@@ -1,0 +1,21 @@
+html,body{
+  margin:0;
+  display: flex;
+}
+input{
+  font-size: large;
+  text-align: center;
+  outline: none;
+  border-radius: 5px;
+}
+label {
+  font-size:small;
+  color:whitesmoke;
+  font-weight: bold;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  background-color: cornflowerblue;
+  padding: 10px;
+}

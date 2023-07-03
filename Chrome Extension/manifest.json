@@ -1,0 +1,14 @@
+    {
+        "manifest_version": 3,
+        "name": "Search Wiki",
+        "version": "1.0",
+        "action": {
+          "default_popup": "popup.html",
+          "default_icon": {
+            "16": "temperature.png",
+            "32": "temperature.png",
+            "48": "temperature.png",
+            "128": "temperature.png"
+          }
+        }
+      }
