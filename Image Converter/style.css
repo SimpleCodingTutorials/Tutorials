@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 5px;
+    background-color: rgba(24,123,90,0.641);
+}
+canvas{
+    width:0px;
+}
+.custom-file-input {
+    display: flex;
+    padding: 4px 12px;
+    width:120px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #e5e1ce;
+    color: black;
+    border-radius: 4px;
+    font-size: 16px;
+}
+#outputFormat {
+    font-size: 14px;
+    padding: 4px 12px;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+span{
+    color: white;
+}
