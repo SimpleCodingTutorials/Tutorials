@@ -1,0 +1,38 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: #E9E3E6;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bb5bc7;
+    height: 80px;
+    padding: 10px;
+}
+#birthDate{
+    font-size: x-large;
+    width:200px;
+}
+#ageDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    color: green;
+    font-weight: bold;
+    width:380px;
+    height: 120px;
+}
+
+.container > *:not(#birthDate){
+    margin:auto 0;
+}
