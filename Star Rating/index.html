@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="Stylesheet" href="style.css">
+    <link rel="Stylesheet" href="./fontawesome-free-6.4.0-web/css/all.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+</head>
+<nav>
+    <h2><img id="logo" src="logo.png"></h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+<header>
+    <h1>Welcome to Simple Coding Tutorials</h1>
+    <h3>Learn the Basics of HTML,CSS and JavaScript with Our Step-by-Step Simple Coding Tutorial</h3>
+</header>
+<main>
+    <section>
+        <h2>Star Rating System</h2>
+        <p id="description">Welcome to this video about star rating systems. In this video, you’ll learn about the
+        importance of star ratings and how they can help businesses and consumers make informed decisions. You’ll
+        also discover how star ratings are calculated and how to interpret them. So sit back, relax, and get ready
+        to learn all about star ratings!
+        </p>     
+        <div id="rateThis">
+            <span>Rate This : </span><i class="fa-regular fa-star"></i><span id="starRating"> Rate </span>
+        </div>
+    </section>
+</main>
+<div class="container">
+    <div class="ratingSystem">
+        <div id="closeButton"><i class="fa-sharp fa-solid fa-xmark"></i></div>
+        <span id="title">RATE This</span>
+        <div id="stars">
+            <span><i class="fa-regular fa-star star"></i></span>
+            <span><i class="fa-regular fa-star star"></i></span>
+            <span><i class="fa-regular fa-star star"></i></span>
+            <span><i class="fa-regular fa-star star"></i></span>
+            <span><i class="fa-regular fa-star star"></i></span>
+            <span><i class="fa-regular fa-star star"></i></span>
+            <span><i class="fa-regular fa-star star"></i></span>
+            <span><i class="fa-regular fa-star star"></i></span>
+            <span><i class="fa-regular fa-star star"></i></span>
+            <span><i class="fa-regular fa-star star"></i></span>
+        </div>
+        <div class="buttonContainer">
+            <button id="rateButton">Rate</button>
+        </div>
+        <div class="buttonContainer">
+            <button id="removeRatingButton">Remove rating</button>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>© 2023 Simple Coding Tutorials</p>
+</footer>
+<a id="button"></a>
+<script src="main.js"></script>
+</body>
+
+</html>
