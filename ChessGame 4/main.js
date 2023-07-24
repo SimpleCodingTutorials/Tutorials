@@ -266,10 +266,15 @@ function drop(ev) {
      squareContent.pieceColor!= "blank" &&
      legalSquares.includes(destinationSquareId)
   ) {
-
-    while (destinationSquare.firstChild) {
-      destinationSquare.removeChild(destinationSquare.firstChild);
+    let children = destinationSquare.children;
+    for (let i = 0; i < children.length; i++) {
+        if (!children[i].classList.contains('coordinate')) {
+          destinationSquare.removeChild(children[i]);
+        }
     }
+    // while (destinationSquare.firstChild) {
+    //   destinationSquare.removeChild(destinationSquare.firstChild);
+    // }
     destinationSquare.appendChild(piece);
     isWhiteTurn = !isWhiteTurn;
     updateBoardSquaresArray(

@@ -246,10 +246,17 @@ function performPromotion(pieceId,pieceType,pieceColor,startingSquareId,destinat
   }
   const destinationSquare = document.getElementById(destinationSquareId);
 
-  if(captured)
-  while(destinationSquare.firstChild){
-    destinationSquare.removeChild(destinationSquare.firstChild);
+  if(captured){
+    let children = destinationSquare.children;
+    for (let i = 0; i < children.length; i++) {
+        if (!children[i].classList.contains('coordinate')) {
+          destinationSquare.removeChild(children[i]);
+        }
+    }
   }
+  // while(destinationSquare.firstChild){
+  //   destinationSquare.removeChild(destinationSquare.firstChild);
+  // }
   destinationSquare.appendChild(piece);
   isWhiteTurn = !isWhiteTurn;
   updateBoardSquaresArray(
@@ -391,9 +398,17 @@ function drop(ev) {
       updateBoardSquaresOpacity();
       return;
     }
-    while (destinationSquare.firstChild) {
-      destinationSquare.removeChild(destinationSquare.firstChild);
+
+    let children = destinationSquare.children;
+    for (let i = 0; i < children.length; i++) {
+        if (!children[i].classList.contains('coordinate')) {
+          destinationSquare.removeChild(children[i]);
+        }
     }
+    // while (destinationSquare.firstChild) {
+    //   if(!destinationSquare.firstChild.classList.contains("coordinate"))
+    //    destinationSquare.removeChild(destinationSquare.firstChild);
+    // }
     destinationSquare.appendChild(piece);
     isWhiteTurn = !isWhiteTurn;
     updateBoardSquaresArray(
