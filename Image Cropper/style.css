@@ -1,0 +1,114 @@
+body{
+    height: 100vh;
+    background-color: #f1d9ee;
+}
+h1{
+    text-align: center;
+}
+.container{
+    display: flex;
+    position: absolute;
+    top:25%;
+    width:97%;
+    justify-content: space-between;
+}
+.canvasContainer {
+    display: flex;
+    width:35vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvasContainer canvas {
+    margin-right: 20px;
+}
+.elementContainer {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 40vw;
+    height: 43vh;
+    align-items: center;
+    margin-left: 20px;
+}
+.imageContainer {
+    display: flex;
+    background-color: whitesmoke;
+    width: 40vw;
+    max-width: 40vw;
+}
+.imageContainer img {
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+}
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+button {
+    width:20vw;
+    height: 60px;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border-color: whitesmoke;
+}
+
+@media only screen and (max-width:900px){
+    button {
+        font-size:10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#alert {
+    position: absolute;
+    top:15%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: green;
+    color:whitesmoke;
+    border-radius: 5px;
+    padding: 15px;
+    width:300px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    font-size: 14px;
+    font-family: arial;
+    font-weight: bold;
+    display: none;
+}
