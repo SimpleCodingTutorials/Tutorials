@@ -1,0 +1,83 @@
+.container{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px;
+  background-color: royalblue;
+  margin: 10px;
+  width: 80vw;
+  color: white;
+  border-radius: 5px;
+}
+.checkmarkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 25px;
+  background-color: rgb(74,200,143);
+  font-size: larger;
+  border-radius: 50%;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+}
+.checkmarkContainer .checkmark {
+  display: none;
+}
+.container input:checked ~ .checkmarkContainer .checkmark {
+  display: inline-block;
+  color:whitesmoke;
+}
+.container input:checked ~ .square .checkmark {
+  color: green;
+}
+.square {
+  border-radius: 4px;
+  background-color: white;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width:52px;
+  height: 30px;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content:"";
+  height: 25px;
+  width: 25px;
+  left:2px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: rgb(74,200,143);
+}
+input:checked+ .slider:before{
+  transform: translateX(90%);
+}
+.slider {
+  border-radius: 30px;
+}
+.slider:before{
+  border-radius: 50%;
+}
