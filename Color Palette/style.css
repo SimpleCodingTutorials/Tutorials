@@ -1,0 +1,37 @@
+body{
+    background-color: lightgrey;
+}
+.container {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    top:45%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    flex-direction: column;
+    border: 20px solid whitesmoke;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+.palette{
+    height: 44px;
+}
+.paletteContainer{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+}
+img{
+    width: 100%;
+}
+.customFileInput{
+    background-color: lightgrey;
+    width: 35%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+}
