@@ -1,0 +1,51 @@
+body{
+    background-color: #d8cbc7;
+}
+h1{
+    color:#353238;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:80%;
+}
+.buttonContainer {
+    display: flex;
+    margin-top: 10px;
+}
+button {
+  margin: 10px;
+  padding: 10px;
+  width: 140px;
+  font-size: x-large;
+  cursor: pointer;
+}
+#speed {
+    accent-color: #47b89d;
+}
+#speedLabel{
+    margin-left: 20px;
+    margin-top: 25px;
+}
+table{
+    border-collapse: collapse;
+    border: 10px solid #353228;
+    border-radius: 10px;
+}
+td{
+    width:13px;
+    height: 13px;
+    border:1px solid lightgrey;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+.alive {
+    background-color: #47b89d;
+}

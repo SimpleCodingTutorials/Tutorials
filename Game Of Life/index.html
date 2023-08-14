@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./fontawesome/css/all.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>
+        Conway's Game Of Life
+      </h1>
+      <table id="grid"></table>
+      <div class="buttonContainer">
+        <button id="start"><i class="fa-solid fa-play"></i></button>
+        <button id="stop"><i class="fa-solid fa-pause"></i></button>
+        <button id="reset"><i class="fa-solid fa-arrows-rotate"></i></button>
+        <span id="speedLabel">Speed:</span>
+        <input id="speed" type="range" max="1000" min="100"/>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
