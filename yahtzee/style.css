@@ -1,0 +1,145 @@
+html,body{
+  background-color: #cde2e3;
+}
+#gameContainer{
+  display: flex;
+  width:100%;
+  height: 100%;
+  margin-top: 40px;
+  align-content: center;
+  justify-content: center;
+}
+.table {
+  display: table;
+  border-collapse: collapse;
+  width:30%;
+  background: linear-gradient(to bottom,white, rgb(203 225 225));
+  cursor:pointer;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  color: black;
+  font-family: "Times New Roman";
+  font-size: 16px;
+  margin: 30px;
+}
+.header {
+  display: table-header-group;
+  background-color: darkcyan;
+}
+.header-cell {
+  display: table-cell;
+  padding:7px;
+  text-align: center;
+  width: 20%;
+  border-color: whitesmoke;
+  color: whitesmoke;
+  font-size: 12px;
+}
+.header-cell:first-child {
+  border-top-left-radius: 10px;
+}
+.header-cell:last-child {
+  border-top-right-radius: 10px;
+}
+.row {
+  display: table-row;
+}
+.row:last-child{
+  font-size: 18px;
+  font-weight: bold;
+  border-top: 2px solid rgb(4,83,83);
+}
+.cell {
+  display: table-cell;
+  border: 1px solid;
+  padding: 7px;
+  text-align: center;
+  width:20%;
+  border-color: rgb(4,83,83);
+  color:rgb(216,144,192);
+  font-size: 12px;
+}
+.cell:first-child {
+  width:60%;
+  text-align: left;
+  color: rgb(4,83,83);
+  font-weight: bold;
+}
+#totalCaption {
+  font-size: 18px;
+}
+#bonusCaption {
+  border-bottom: 2px solid rgb(4,83,83);
+}
+#sumCaption {
+  border-top: 2px solid rgb(4,83,83);
+}
+#bonusCaption > *,#sumCaption > * {
+  font-weight: bold;
+}
+
+#board{
+  background:url(yahtzee.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:60%;
+  min-height: 80%;
+  margin: 20px;
+  border: 20px solid #e7e7e7;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.4);
+  background-blend-mode: darken;
+}
+#playArea {
+  min-height: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+.dice-container {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:2%;
+  background: #cd0473;
+  margin-top: auto;
+}
+.dice {
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 10px;
+  transition: all 0.4s linear;
+  z-index: 1000;
+}
+.face {
+  width:100%;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.4s linear;
+}
+.face:hover {
+  transform: scale(1.1);
+}
+#endGameMessage {
+  align-self: center;
+  color: yellow;
+  font-size: 80px;
+  width:100%;
+  text-align: center;
+  transform: translateX(5%);
+}
+#roll {
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  border:transparent;
+  align-self: flex-end;
+  color: whitesmoke;
+  font-weight: bold;
+  background-image: url("button.png");
+  background-size: cover;
+  cursor: pointer;
+}
+#roll:hover {
+  transform: scale(1.1);
+}
