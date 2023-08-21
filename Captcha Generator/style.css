@@ -1,0 +1,74 @@
+#captchaCanvas{
+  display: none;
+}
+
+@font-face {
+  font-family:captchaFont;
+  src:url("junkos typewriter.ttf");
+}
+.container{
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  background-color: #eff0f1;
+  padding:7px;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+.controlContainer {
+  display: flex;
+  margin-left:-6px;
+}
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  margin:5px;
+  padding:5px;
+  border-radius:5px;
+}
+.inputContainer{
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  padding: 5px;
+  border:1px solid lightgrey;
+  border-radius: 5px;
+}
+button {
+  cursor:pointer;
+}
+#refreshText {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-color: lightgray;
+}
+#readText {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-color: lightgray;
+}
+#submit {
+  width:44%;
+  height:28px;
+  margin-top: 5px;
+  background-color: whitesmoke;
+  border-radius: 2px;
+  border: 1px solid;
+  font-weight: bold;
+}
+#checkCaptchaText {
+  margin:10px;
+  font-size: 12px;
+}
+.submitContainer {
+  display:flex;
+}
+#userText {
+  border-color: lightgray;
+}
+img {
+  border-radius:5px;
+}

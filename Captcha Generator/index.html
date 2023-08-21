@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome/css/all.css" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="captchaCanvas"></canvas>
+    <div class="container">
+        <div>
+          <div id="imageContainer"></div>
+        </div>
+        <div class="controlContainer">
+          <div class="inputContainer">
+            <input id="userText" type="text"/>
+            <div class="submitContainer">
+              <button id="submit">Verify</button>
+              <span id="checkCaptchaText"></span>
+            </div>
+          </div>
+          <div class="buttonContainer">
+            <button id="refreshText"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button id="readText"><i class="fa-solid fa-volume-high"></i></button>
+          </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
