@@ -1,0 +1,66 @@
+body{
+    background-color: cornflowerblue;
+    color: white;
+}
+h1{
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#iteration{
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+}
+.container{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+}
+.buttonContainer {
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+}
+button {
+    margin: 10px;
+    padding: 5px;
+    width: 80px;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#speed{
+    accent-color: whitesmoke;
+    width: 80px;
+}
+#speedLabel {
+    margin-left: 5px;
+}
+#rule{
+    margin-left: 5px;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+}
+#gridSize{
+    margin-left: 5px;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+    width: 60px;
+    text-align: center;
+}
+.label{
+    margin-left: 15px;
+}
+canvas {
+    border:1px solid black;
+}
