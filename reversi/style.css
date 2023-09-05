@@ -1,0 +1,150 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: white;
+  flex-direction: column;
+  box-sizing: border-box;
+  }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:80vw;
+  height: 80vw;
+  background-color: white;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+#reversiBoard {
+  width:80%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 10px solid transparent;
+  box-sizing: border-box;
+  border-image: url("leatherborder.avif") 30 round;
+
+}
+.square {
+  width:12.5%;
+  height: 12.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url('boardbackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  border:1px solid rgba(96, 149, 159, 0.739);
+}
+
+.piece {
+  width:75%;
+  z-index: 1;
+  cursor: pointer;
+}
+.piece img {
+  max-width: 100%;
+  width:100%;
+  height: auto;
+  background: transparent;
+}
+.legal-square {
+  position: relative;
+  cursor: pointer;
+}
+.legal-square::before {
+  content:"";
+  display: block;
+  width: 60%;
+  height: 60%;
+  border: 4px solid #e8c0edb3;
+  background-color: transparent;
+  border-radius: 50%;
+  top:20%;
+  left:20%;
+}
+.legal-square:hover{
+  opacity: 0.7;
+}
+@keyframes flip {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+.flip {
+  animation: flip 0.5s linear;
+}
+
+#whiteScore, #blackScore{
+  display: flex;
+  width:80%;
+  background-color: rgb(42, 42, 42);
+  color: white;
+  text-align: center;
+  height: 10%;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid black;
+  box-sizing: border-box;
+  position: relative;
+  font-size: 18px;
+
+}
+#blackScore{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#whiteScore{
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+#whiteScore::after,#blackScore::after {
+font-family: "FontAwesome";
+content: "\f111";
+color: #c3c3c3;
+margin-left: 10px;
+font-size: 15px;
+}
+#whiteScore.active::after,#blackScore.active::after{
+  font-family: "FontAwesome";
+content: "\f111";
+color: #3dff24;
+margin-left: 10px;
+font-size: 15px;
+
+}
+
+
+#alert {
+position: fixed;
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+color:purple;
+width:44vw;
+text-align: center;
+align-content: center;
+justify-content: center;
+font-size:xxx-large;
+font-weight: bold;
+z-index: 1000;
+display: none;
+
+}
+
+@media (min-width:600px) {
+  .container {
+      width:500px;
+      height: 500px;
+  }
+}
