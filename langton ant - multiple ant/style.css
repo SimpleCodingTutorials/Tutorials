@@ -1,0 +1,134 @@
+body {
+  background-color: #e0d8de;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#iteration {
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+}
+canvas {
+  display: flex;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
+}
+.container {
+  display: flex;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+}
+.inputContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.buttonContainer {
+  display: flex;
+  flex: 1 0 20%;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #75b9be;
+  border-radius: 5px;
+  margin: 5px;
+}
+.buttonContainer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+button {
+  margin: 10px;
+  padding: 5px;
+  width: 30%;
+  font-size: larger;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#speed {
+  accent-color: whitesmoke;
+  width: 120px;
+}
+#rules {
+  height: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  width: 120px;
+}
+#gridSize {
+  margin-left: 5px;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  width: 120px;
+  text-align: center;
+}
+.antContainer {
+  display: flex;
+  flex: 2 0 65%;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #534b62;
+  border-radius: 5px;
+}
+.ant {
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex: 0 1 31.4%;
+  flex-direction: column;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  max-height: 130px;
+}
+.ant h3 {
+  text-align: center;
+  margin: 5px;
+}
+div.ant i {
+  align-self: flex-end;
+  cursor: pointer;
+  width: 0.75em;
+  height: 0.75em;
+  font-size: 0.75em;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+div.ant:hover i {
+  opacity: 1;
+}
+.ant > div {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+.ant label {
+  width: 120px;
+}
+.ant input {
+  width: 50px;
+}
+#addAnt {
+  width: 40px;
+}
+@media screen and (max-width: 976px) {
+  .ant {
+    flex: 0 1 45%;
+  }
+}
+@media screen and (max-width: 766px) {
+  .ant {
+    flex: 0 1 99%;
+  }
+}

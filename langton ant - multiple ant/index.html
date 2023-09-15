@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./fontawesome/css/all.css" />
+  </head>
+  <body>
+    <div class="container">
+        <h1>
+          Langton's Ant
+        </h1>
+        <span id="iteration">Iteration:0</span>
+        <div class="canvasContainer">
+          <canvas id="canvas" width="500" height="500"></canvas>
+        </div>
+    </div>
+    <div class="inputContainer">
+      <div class="buttonContainer">
+        <div>
+          <button id="addAnt"><i class="fa-solid fa-plus"></i></button>
+          <button id="startPause"><i class="fa-solid fa-play"></i></button>
+          <button id="reset"><i class="fa-solid fa-arrows-rotate"></i></button>
+        </div>
+        <div>
+          <label for="speed">Speed:</label>
+          <input id="speed" type="range" max="1000" min="1"/>
+        </div>
+        <div>
+          <label for="rules">Rule:</label>
+          <input id="rules" type="text" oninput="filterInput(event)"/>
+        </div>
+       
+       <div>
+        <label for="gridSize">Grid Size:</label>
+        <input id="gridSize" type="number" oninput="filterSizeInput(event)"/>
+       </div>
+       
+      </div>
+      <div class="antContainer">
+        <!-- <div class="ant">
+          <i class="fa-solid fa-times" title="Delete Ant" id="delete-ant"></i>
+          <h3>Ant</h3>
+          <div>
+            <label for="ant1x0">Inital X:</label>
+            <input id="ant1x0" type="number"/>
+          </div>
+          <div>
+            <label for="ant1y0">Inital Y:</label>
+            <input id="ant1y0" type="number"/>
+          </div>
+          <div>
+            <label >Inital Direction:</label>
+            <select>
+              <option>Up</option>
+              <option>Down</option>
+              <option>Left</option>
+              <option>Right</option>
+            </select>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
