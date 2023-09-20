@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="fontawesome/css/all.css" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Guess the Number</h1>
+    <p>Enter the range of numbers:</p>
+    <div class="inputContainer">
+      <input type="number" id="min" placeholder="Min">
+      <input type="number" id="max" placeholder="Max">
+      <button id="start">Start</button>
+    </div>
+    <div class="inputContainer">
+      <input type="number" id="guess" disabled placeholder="Enter your guess">
+      <div class="buttonContainer">
+        <button id="submit" disabled>Submit</button>
+        <button id="restart" disabled>Restart</button>
+      </div>
+    </div>
+    <p id="message"></p>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

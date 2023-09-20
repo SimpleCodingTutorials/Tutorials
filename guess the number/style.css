@@ -1,0 +1,53 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 5px solid black;
+  border-radius: 5px;
+  padding: 20px;
+  font-family: consolas;
+  background-color: #f8f7f9;
+  color: #3a2c33;
+  font-weight: bold;
+  width: 45vw;
+}
+h1,p{
+  text-align: center;
+}
+.inputContainer{
+  display: flex;
+  margin: 5px;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+input {
+  border-radius: 5px;
+  height: 25px;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: right;
+}
+button {
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+  background-color: #508991;
+  color: white;
+  margin: 2px;
+  font-family: consolas;
+  font-weight: bold;
+  cursor: pointer;
+}
+#message {
+  height: 25px;
+  text-align: center;
+}
