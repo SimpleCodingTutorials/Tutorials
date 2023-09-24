@@ -22,7 +22,7 @@ let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 let squareSize;
 let colors = rule.map(()=>`#${Math.floor(Math.random()*16777215).toString(16)}`);
-colors[0]=`#FFFFFF`;
+colors[0]=`#ECECED`;
 
 function setupGrid(){
   for(let x = -size; x<=size;x++){
@@ -32,7 +32,7 @@ function setupGrid(){
   }
   squareSize = Math.min(canvas.width,canvas.height)/(size*2);
   colors = rule.map(()=>`#${Math.floor(Math.random()*16777215).toString(16)}`);
-  colors[0]=`#FFFFFF`;
+  colors[0]=`#ECECED`;
 }
 
 setupGrid();

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="fontawesome/css/all.css">
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+   <div class="container">
+    <div class="searchContainer">
+      <input id="search" type="search" />
+      <button id="searchButton"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="currentForcast">
+      <div class="currentForcastInfo">
+        <img id="currentIcon" src="113.webp">  
+        <div>
+          <span id="dayTemperature">0</span>
+        </div> 
+        <div>
+          <span id="currentTemperatureUnit">°C</span>
+        </div> 
+        <div class="currentConditions">
+          <div>Precipitation:<span id="precipitation"></span></div>
+          <div>Humidity:<span id="humidity"></span></div>
+          <div>Wind:<span id="wind"></span></div>
+        </div>
+      </div>
+      <div class="currentForcastDate">
+        <div id="cityName">Weather</div>
+        <div id="today">Weekday</div>
+        <div id="condition">Condition</div>
+      </div>
+    </div>
+    <div class="dailyForcastContainer">
+      <div class="dailyForcast"><div class="weekday">Fri</div>
+      <div><img id="currentIcon" src="113.webp"/></div>
+      <div class="maxMinTemp">
+        <span class="temp">25</span>
+        <span class="temp">19</span>
+      </div>
+    </div>
+   </div>
+
+  <div id="alert"></div>
+  <script src="main.js"></script>
+</body>
+
+</html>
