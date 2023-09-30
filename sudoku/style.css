@@ -1,0 +1,166 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  margin: 0 auto;
+  background-color: white;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  height: 85vh;
+  background-color: white;
+  flex-direction: row;
+}
+#gameBoard{
+  width: 70%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 10px solid transparent;
+}
+.square {
+  width: 11.11%;
+  height: 11.11%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  border:1px solid rgb(202,199,199);
+  cursor: pointer;
+  font-size: 30px;
+  font-family: arial;
+}
+.square.active {
+  background-color: lightblue;
+}
+.top {
+  border-top: 2px solid rgb(1,1,69);
+}
+.bottom {
+  border-bottom: 2px solid rgb(1,1,69);
+}
+.left {
+  border-left: 2px solid rgb(1,1,69);
+}
+.right {
+  border-right: 2px solid rgb(1,1,69);
+}
+.filled {
+  color: black;
+}
+.false {
+  color:darkred;
+}
+.true{
+  color: green;
+}
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+}
+#solveButton,#newGameButton,select{
+  width: 100%;
+  height: 50px;
+  margin: 2px;
+  background-color: #0072e3;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+#solveButton:hover,#newGameButton:hover{
+  background-color: #0467c9;
+}
+#eraseButton,#hintButton {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  color: #0072e3;
+  background-color: rgb(227,233,246);
+  font-size: larger;
+  cursor: pointer;
+  margin: 2px;
+}
+#eraseButton:hover,#hintButton:hover {
+  background-color: whitesmoke;
+}
+.numbers {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.number{
+  width: 32%;
+  height: 30%;
+  background-color: rgb(227,233,246);
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 30px;
+  color:#0072e3;
+  border: none;
+  border-radius: 5px;
+  margin: 1px;
+}
+.number:hover {
+  background-color: whitesmoke;
+}
+@media (max-width:600px) {
+  .container{
+    flex-wrap: wrap;
+  }
+  .square,.number {
+    font-size: 14px;
+  }
+  #gameBoard{
+    width: 100%;
+    height: 60%;
+    align-self: center;
+  }
+  #solveButton,#newGameButton,select{
+    height: 20px;
+    width: 80%;
+    font-size: 8px;
+  }
+  .number {
+    width: 25%;
+    height: 30%;
+  }
+  .buttonContainer{
+    width: 50%;
+    height: 50%;
+    align-self: center;
+  }
+  #eraseButton,#hintButton {
+    width: 25px;
+    height: 25px;
+    font-size: small;
+  }
+  span {
+    font-size: small;
+  }
+}
+
+
+#alert {
+  position: fixed;
+  transform: translate(-40%, -50%);
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  font-size: x-large;
+  font-weight: bold;
+  z-index: 1000;
+  display: none;
+}

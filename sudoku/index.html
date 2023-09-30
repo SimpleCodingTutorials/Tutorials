@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="fontawesome/css/all.css" />
+
+  <script src="sudoku.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div id="gameBoard">
+      <!--9th Rank ---->
+      <div class="square top left"></div>
+      <div class="square top"></div>
+      <div class="square top right"></div>
+      <div class="square top"></div>
+      <div class="square top"></div>
+      <div class="square top right"></div>
+      <div class="square top"></div>
+      <div class="square top"></div>
+      <div class="square right top"></div>
+        <!--8th Rank ---->
+        <div class="square left"></div>
+        <div class="square"></div>
+        <div class="square right"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square right"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square right"></div>
+          <!--7th Rank ---->
+      <div class="square left bottom"></div>
+      <div class="square bottom"></div>
+      <div class="square right bottom"></div>
+      <div class="square bottom"></div>
+      <div class="square bottom"></div>
+      <div class="square right bottom"></div>
+      <div class="square bottom"></div>
+      <div class="square bottom"></div>
+      <div class="square right bottom"></div>
+        <!--6th Rank ---->
+        <div class="square left"></div>
+        <div class="square"></div>
+        <div class="square right"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square right"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square right"></div>
+          <!--5th Rank ---->
+      <div class="square left"></div>
+      <div class="square"></div>
+      <div class="square right"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square right"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square right"></div>
+        <!--4th Rank ---->
+        <div class="square left bottom"></div>
+        <div class="square bottom"></div>
+        <div class="square right bottom"></div>
+        <div class="square bottom"></div>
+        <div class="square bottom"></div>
+        <div class="square right bottom"></div>
+        <div class="square bottom"></div>
+        <div class="square bottom"></div>
+        <div class="square right bottom"></div>
+          <!--3th Rank ---->
+      <div class="square left"></div>
+      <div class="square"></div>
+      <div class="square right"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square right"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square right"></div>
+        <!--2th Rank ---->
+        <div class="square left"></div>
+        <div class="square"></div>
+        <div class="square right"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square right"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square right"></div>
+          <!--1th Rank ---->
+      <div class="square bottom left"></div>
+      <div class="square bottom"></div>
+      <div class="square bottom right"></div>
+      <div class="square bottom"></div>
+      <div class="square bottom"></div>
+      <div class="square bottom right"></div>
+      <div class="square bottom"></div>
+      <div class="square bottom"></div>
+      <div class="square bottom right"></div>
+    </div>
+      <div class="buttonContainer">
+        <div>
+          <span>Mistake</span>
+          <span id="mistakes">0/3</span>
+          <span>Hints:</span>
+          <span id="hint">3/3</span>
+        </div>
+        <div>
+          <button id="eraseButton" title="Erase"><i class="fas fa-eraser"></i></button>
+          <button id="hintButton" title="Erase"><i class="fas fa-circle-info"></i></button>
+        </div>
+        <div class="numbers">
+          <button class="number">1</button>
+          <button class="number">2</button>
+          <button class="number">3</button>
+          <button class="number">4</button>
+          <button class="number">5</button>
+          <button class="number">6</button>
+          <button class="number">7</button>
+          <button class="number">8</button>
+          <button class="number">9</button>
+        </div>
+        <div>
+          <button id="newGameButton">New Game</button>
+          <button id="solveButton">Solve</button>
+          <select id="difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+              <option value="insane">Insane</option>
+              <option value="inhuman">Inhuman</option>
+          </select>
+
+        </div>
+      </div>
+  </div>
+<div id="alert"></div>
+
+   <script src="main.js"></script> 
+</body>
+
+</html>
