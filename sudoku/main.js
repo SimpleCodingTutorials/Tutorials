@@ -158,41 +158,6 @@ function resetBoard() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function resetBoard() {
-  for (let i=0; i<squares.length;i++) {
-    squares[i].classList.remove("filled");
-    squares[i].classList.remove("active");
-    squares[i].classList.remove("true");
-    squares[i].classList.remove("false");
-  }
-}
-
 function showAlert(message, color) {
   const alert = document.getElementById("alert");
   alert.innerHTML = message;
