@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./fontawesome/css/all.css">
+
+</head>
+<body >
+  <div id="setUsername">
+    <input id="usernameInput" autocomplete="off" placeholder="Enter Username" />
+    <button id="setUsernameButton" onclick="setUsername()">Set Username</button>
+  </div>
+  <div id="chat">
+    <form action="" style="display: flex;">
+      <input id="messageInput" autocomplete="off"/>
+      <button id="sendButton"><i class="fas fa-paper-plane"></i></button>
+    </form>
+  </div>
+
+  <div id="messages"></div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+      
+  </body>
+</html>
+
+
