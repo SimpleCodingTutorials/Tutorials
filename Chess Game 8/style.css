@@ -1,0 +1,234 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  }
+.chessBoard {
+  width:70vw;
+  height: 70vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.square {
+  width:12.5%;
+  height: 12.5%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.white {
+  background-color: #f0d9b5;
+}
+.black {
+  background-color: #b58863;
+}
+.coordinate {
+  height:auto;
+  display:flex;
+  bottom: 4%;
+  left:4%;
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.rank {
+  top:4%;
+  right:4%;
+  left:auto;
+}
+.whiteText {
+  color:#f0d9b5;
+}
+.blackText {
+  color:#b58863;
+}
+.piece {
+  width:100%;
+  z-index: 1;
+  cursor: pointer;
+}
+.piece img {
+  max-width: 100%;
+  width:100%;
+  height: auto;
+}
+
+#alert {
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color:rgb(0, 176, 67);
+  width:44vw;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  font-size:xxx-large;
+  font-weight: bold;
+  z-index: 1000;
+  display: none;
+
+}
+    
+
+@media (min-width:600px) {
+  .chessBoard {
+      width:500px;
+      height: 500px;
+  }
+}
+@media (max-width:600px) {
+  .coordinate {
+    font-size: 8px;
+  }
+}
+
+.promotionOption{
+  border-radius: 50%;
+  background-color: darkgray;
+  transition: transform 0.2s;
+  position: absolute;
+  z-index: 1000;
+}
+.promotionOption:hover {
+  cursor: pointer;
+  border-radius: 0%;
+  background-color:#539B0C;
+  width: 100%;
+}
+.promotionOption img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+#evalBar{
+  background-color:rgb(255, 255, 255);
+  width:5%;
+  height: 70vw;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 3px;
+
+}
+#evalBar::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 5px rgba(0,0,0,.7) inset;
+  border-radius: 3px;
+
+}
+.container {
+  display: flex;
+}
+#evalBar .blackBar {
+  width: 100%;
+  height: 35%;
+  background: #666;
+  transition: height 1s;
+  position: absolute;
+  top: 0;
+  border-radius: 3px;
+
+}
+ .zero {
+  width: 100%;
+  opacity: 1;
+  border-bottom: 7px solid rgba(214,79,0,.4);
+  position: absolute;
+  top: 0;
+  height: 50%;
+}
+.evalNum {
+  width: 100%;
+  opacity: 1;
+  position: absolute;
+  top: 95%;
+  height: 50%;
+  font-size: 0.5rem;
+  font-weight: bolder;
+  text-align: center;
+  color: #d18232;
+}
+
+#topLines {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  background-color: whitesmoke;
+  border-spacing: 0px;
+  max-width: 80vw;
+  overflow: hidden;
+}
+
+#topLines td {
+  border-collapse: collapse;
+  border:1px solid lightgray;
+  padding: 8px;
+  font-size: 17px;
+  white-space: nowrap;
+  width: 100%;
+  text-align: left;
+}
+#topLines th {
+  padding: 8px;
+  text-align: left;
+}
+
+#topLines td,#topLines th {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 500px;
+}
+#line1,#line2,#line3{
+  min-width: 500px;
+}
+#eval1,#eval2,#eval3{
+  min-width: 40px;
+}
+tr{
+  height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:600px) {
+   #evalBar{
+      height: 500px;
+  }
+
+}
+
