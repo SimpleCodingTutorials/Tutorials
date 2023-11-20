@@ -1,0 +1,90 @@
+.table-responsive{
+    width:100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+th,td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+th{
+    background-color: #3A3335;
+    color: white;
+}
+th:first-child{
+    border-top-left-radius: 10px;
+}
+th:last-child{
+    border-top-right-radius: 10px;
+}
+tr:nth-child(even) {
+    background-color: #DBD4D3;
+}
+tr:nth-child(odd) {
+    background-color: whitesmoke;
+}
+button {
+    width: 80%;
+    height: 35px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: none;
+    border-radius: 4px;
+    background-color: #81c5b257;
+    color:black;
+    cursor: pointer;
+}
+img{
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    table,thead,tbody,th,tr {
+        display: block;
+    }
+    thead tr {
+        display: none;
+    }
+    tr{
+        margin: 0 0 1rem 0;
+        border-radius: 5px;
+    }
+    tr:nth-child(even) {
+        background-color: #DBD4D3;
+    }
+    tr:nth-child(odd) {
+        background-color: whitesmoke;
+    }
+    td{
+        border-bottom: 2px solid #e3dfdf;
+        position: relative;
+        padding-left: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    td:last-child{
+        border-bottom: none;
+    }
+    td::before {
+        position: absolute;
+        left: 16px;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+    td:nth-of-type(1)::before{content:"Image";}
+    td:nth-of-type(2)::before{content:"Name";}
+    td:nth-of-type(3)::before{content:"Description";}
+    td:nth-of-type(4)::before{content:"Date";}
+    td:nth-of-type(5)::before{content:"Status";}
+    td:nth-of-type(6)::before{content:"Action";}
+}
