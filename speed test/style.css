@@ -1,0 +1,31 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#downloadSpeedLabel,#downloadSpeed {
+  margin:2px;
+  width:40%;
+  text-align: center;
+}
+#downloadSpeed {
+  height: 30px;
+}
+
+svg>g>text{
+  font-size: 16px;
+}
+
+button {
+  background-color: #353538;
+  color: whitesmoke;
+  font-size: large;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 150px;
+  border: none;
+  height: 50px;
+}
