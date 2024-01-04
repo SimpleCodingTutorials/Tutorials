@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom:40px;
+    border:1px solid lightgray;
+    width: 60%;
+    background: thistle;
+    border-radius: 5px;
+}
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.fromContainer,.toContainer{
+    display: flex;
+    flex-direction: column;
+    width: 42%;
+}
+#equals {
+    margin-left:10px;
+    margin-right:10px;
+    font-size: xx-large;
+    font-weight: bold;
+}
+select,input {
+    height: 40px;
+    font-size:large;
+    outline: none;
+}
+
+@media (max-width:650px) {
+    .container {
+        width:100%;
+    }
+}
