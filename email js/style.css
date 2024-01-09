@@ -1,0 +1,76 @@
+#contact-form {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+h1 {
+    color: rgb(18 36 129);
+}
+input,textarea {
+    margin: 5px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    height: 30px;
+    width: 50vw;
+    background-color: whitesmoke;
+    padding: 10px;
+    outline: none;
+}
+textarea {
+    height: 120px;
+}
+
+#submit {
+    background-color: rgb(63 74 131);
+    border: none;
+    color: whitesmoke;
+    height: 40px;
+    width: 52vw;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#alert {
+    position: absolute;
+    display: none;
+    background-color: green;
+    border-radius: 5px;
+    color: whitesmoke;
+    width: 30vw;
+    height: 6vh;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 1000;
+    top:0;
+    right:0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+  }
