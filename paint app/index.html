@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+
+</head>
+<body>
+ <div id="menu">
+  <div class="container">
+    <div class="actionIcon" id="save"><i class="far fa-save"></i></div>
+    <div class="actionIcon" id="clearCanvas"><i class="fa fa-refresh"></i></div>
+  </div>
+  <div class="container">
+    <div class="interactiveToolIcon" id="ellipse"><i class="fa-regular fa-circle"></i></div>
+    <div class="interactiveToolIcon" id="rectangle"><i class="fa-regular fa-square"></i></div>
+    <div class="interactiveToolIcon" id="triangle"><img src="./triangle.png"/></div>
+    <div class="interactiveToolIcon" id="line"><img src="./line.png"/></div>
+    <div class="checkboxContainer"><input id="fillShape" type="checkbox"/>Fill</div>
+  </div>
+   <div class="container">
+    <div class="interactiveToolIcon" id="pen"><i class="fa-solid fa-pen"></i></div>
+    <div class="interactiveToolIcon" id="eraser"><i class="fa-solid fa-eraser"></i></div>
+    <div class="interactiveToolIcon" id="bucket"><img src="./fill.png"/></div>
+   </div>
+   <div class="container">
+    <div class="actionIcon" id="changeColor">
+      <img src="./colors.png">
+    </div>
+    <div id="selectedColor"></div>
+   </div>
+   <div class="container">
+    <input id="lineWeight" type="range" min="1" max="100" value="1"/><span id="lineWeightLabel">Size</span>
+   </div>
+ </div>
+ <div id="canvasContainer"></div>
+ <input type="color" id="colorPicker" style="display: none;">
+ <script src="main.js"></script>
+
+</body>
+</html>

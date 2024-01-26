@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    position: relative;
+    font-family: sans-serif;
+}
+#canvasContainer {
+    display: flex;
+    width: 900px;
+    height: 80vh;
+}
+
+.container {
+    display: flex;
+    border-right: 1px solid lightgray;
+    align-items: center;
+}
+#menu {
+    display: flex;
+    width:900px;
+    background-color: #F5F6F7;
+    flex-direction: row;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    align-items: stretch;
+}
+.interactiveToolIcon,.actionIcon,.checkboxContainer,#selectedColor{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 3px;
+    padding:7px;
+}
+.checkboxContainer {
+    font-size:12px;
+}
+.interactiveToolIcon:hover {
+    background-color: lightgray;
+    border-radius: 50%;
+}
+.active {
+    background: rgb(176,217,244);
+    border-radius: 50%;
+}
+img {
+    height: 20px;
+}
+.actionIcon:hover {
+    background-color: lightgray;
+    border-radius: 50%;
+}
+#selectedColor {
+    background-color: black;
+    height: 6px;
+    width:6px;
+    margin-right: 10px;
+}
+#lineWeightLabel {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+
+@media (max-width:900px) {
+    body{
+        align-items: flex-start;
+    }
+}
