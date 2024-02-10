@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+  <form id="upload-form" action="/upload" method ="post" enctype="multipart/form-data">
+    <h2>Image to PDF Converter</h2>
+    <div class="button-wrap">
+      <label class="button" for="upload">Upload File</label>
+      <input id="upload" type="file" accept="image/*">
+      <div id="file-name">No File Chosen</div>
+    </div>
+    <div class="inputContainer">
+      <input type="submit">
+    </div>
+  </form>
+  <div id="download-link"></div>
+  <script src="client.js"></script>
+</body>
+</html>

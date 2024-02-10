@@ -1,0 +1,68 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 45%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#upload-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35vw;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+
+input[type="submit"] {
+    width: 125px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: black;
+    color: whitesmoke;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center;
+}
+.button-wrap{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    height: 60px;
+}
+
+.button-wrap input[type="file"] {
+    display: none;
+}
+.button{
+    display: inline-block;
+    padding: 12px 18px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #8ebf42;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+#file-name {
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 20px;
+    overflow: hidden;
+}
+#download-link {
+    margin-top: 10px;
+}
