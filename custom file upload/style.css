@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.button-wrap {
+    display: flex;
+    align-items: center;
+}
+.button-wrap input[type="file"] {
+    display: none;
+}
+.button {
+    padding:20px 28px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: green;
+    font-size: 16px;
+    color: whitesmoke;
+}
+
+#file-name {
+    text-align: center;
+    width: 150px;
+    height: 20px;
+    overflow: hidden;
+}
