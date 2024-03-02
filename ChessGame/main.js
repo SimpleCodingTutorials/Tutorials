@@ -265,8 +265,8 @@ function checkPawnDiagonalCaptures(
   let currentSquareId = currentFile + currentRank;
 
   const direction = pieceColor == "white" ? 1 : -1;
-
-  currentRank += direction;
+ if(!(rank==8 && direction==1) && !(rank==1 && direction==-1))
+   currentRank += direction;
   for (let i = -1; i <= 1; i += 2) {
     currentFile = String.fromCharCode(file.charCodeAt(0) + i);
     if (currentFile >= "a" && currentFile <= "h") {
