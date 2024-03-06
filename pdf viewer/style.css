@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+#flipbook {
+  display: flex;
+  width: 70vw;
+  height: 90vh;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.page {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  cursor: grab;
+}
+
+#message {
+  display: flex;
+  position: absolute;
+  font-size: x-large;
+  color: whitesmoke;
+}
+#pageNumber {
+  width: 40px;
+  text-align: center;
+}
