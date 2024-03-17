@@ -18,7 +18,7 @@ function paginateTable() {
   createPageLink("<",currentPage-1);
 
   let startPageNumber = currentPage < 5 ? 1 : (currentPage>totalPages-2?totalPages-4 : currentPage-2);
-  let endPageNumber = currentPage<=totalPages -2 ? startPageNumber+4 : totalPages;
+  let endPageNumber =totalPages<5 ? totalPages : (currentPage<=totalPages -2 ? startPageNumber+4 : totalPages);
   for (let i=startPageNumber;i<=endPageNumber;i++) {
     createPageLink(i,i);
   }
