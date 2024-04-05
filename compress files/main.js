@@ -14,7 +14,7 @@ async function zipDirectory(source,output,password) {
     const data = new Uint8Array(mz.zip());
     await fs.writeFile(output,data);
 }
-
+//
 zipDirectory("./zipped","./output.zip","123456");
 
 
