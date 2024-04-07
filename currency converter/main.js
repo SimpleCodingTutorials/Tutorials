@@ -1,6 +1,6 @@
 const fromInput = document.getElementById("from");
 const toInput = document.getElementById("to");
-const apiKey = "583654c1ecdf18207bc9a239a9a41253";
+const apiKey = "1f1mn26v6hbkppm689mfl8epo7";
 let fromCurrency = "AED";
 let toCurrency ="AED";
 let toValue = 1;
