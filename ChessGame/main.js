@@ -269,7 +269,7 @@ function checkPawnDiagonalCaptures(
    currentRank += direction;
   for (let i = -1; i <= 1; i += 2) {
     currentFile = String.fromCharCode(file.charCodeAt(0) + i);
-    if (currentFile >= "a" && currentFile <= "h") {
+    if (currentFile >= "a" && currentFile <= "h" && currentRank<=8 && currentRank>=1){
       currentSquareId = currentFile + currentRank;
       let currentSquare = boardSquaresArray.find(
         (element) => element.squareId === currentSquareId
