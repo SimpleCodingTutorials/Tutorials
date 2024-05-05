@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: #000000d9;
+  padding: 20px;
+  width: 800px;
+}
+#boardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:10px solid lightgray;
+  border-radius: 5px;
+  margin-left:140px
+}
+.displayContainer {
+  display: flex;
+  height: 600px;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.score {
+  display: flex;
+  border: 8px solid lightgray;
+  margin: 10px;
+  margin-top:0;
+  margin-bottom: 0;
+  padding: 10px;
+  font-family: fantasy;
+  font-size: 30px;
+  color: #63f319;
+  justify-content: space-between;
+}
+.nextTetrimino {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 120px;
+  border:10px solid lightgray;
+  margin: 10px;
+  margin-top:0px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.nextTetrimino img {
+  scale: 0.5;
+}
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 110px;
+  border:10px solid lightgray;
+  margin:10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.titleContainer img {
+  width: 100%;
+}
