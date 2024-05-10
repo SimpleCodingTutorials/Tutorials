@@ -436,7 +436,7 @@ hasLanded() {
 }
 landTetrimino() {
   this.setTetriminoOnBoard(1);
-  //this.replaceTetriminoWithBlocks();
+  this.replaceTetriminoWithBlocks();
   this.checkLines();
   this.spawnTetrimino();
 }
