@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="hammer.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="elementContainer">
+      <div class="title">
+        <h1>2048</h1>
+      </div>
+      <div class="scoreElementContainer">
+        <div id="scoreLabel">Score</div>
+        <div id="scoreElement">0</div>
+      </div>
+    
+    </div>
+    <div class="description">Join the numbers and get to the 2048 tile!</div>
+    <div class="newGameContainer">
+      <button class="newGame" onclick="startNewGame()">New Game</button>
+    </div>
+    <div class="container">
+      <div id="alert"></div>
+      <div class="board">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+      <div class="tileContainer"></div>
+    </div>
+  
+   
+    <script src="main.js"></script>
+  </body>
+</html>
