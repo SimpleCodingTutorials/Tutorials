@@ -1,0 +1,22 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  height: 175px;
+  width: 175px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.website-counter {
+  font-size:50px;
+  margin-bottom: 10px;
+  color: mediumseagreen;
+}
