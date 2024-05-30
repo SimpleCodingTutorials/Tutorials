@@ -803,7 +803,7 @@ function isKingInCheck(squareId,pieceColor,boardSquaresArray){
   return false;
 }
 function getkingLastMove(color){
-  let kingLastMove=moves.find(element=>element.pieceType==="king"&&element.pieceColor===color);
+  let kingLastMove=moves.findLast(element=>element.pieceType==="king"&&element.pieceColor===color);
   if(kingLastMove==undefined)
   return isWhiteTurn ? "e1" : "e8";
   return kingLastMove.to;
