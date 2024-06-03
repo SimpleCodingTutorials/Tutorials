@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+
+</head>
+<body >
+   <div class="container">
+    <div class="score">Player: <span id="playerScoreElement">0</span></div>
+    <div class="score">Computer: <span id="computerScoreElement">0</span></div>
+   </div> 
+   <div class="container">
+    <div class="rps" onclick="playGame('rock')"><img src="rock.png"></div>
+    <div class="rps" onclick="playGame('paper')"><img src="paper.png"></div>
+    <div class="rps" onclick="playGame('scissors')"><img src="scissors.png"></div>
+   </div>
+   <div class="container">
+    <div class="rpsChoice" id="player1" ><img src=""></div>
+    <div class="rpsChoice" id="computer" ><img src=""></div>
+   </div>
+   <p id="result"></p>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
+
