@@ -10,7 +10,7 @@ function computerPlay() {
 function playGame(playerSelection) {
   const computerSelection = computerPlay();
   if(playerSelection === computerSelection) {
-    document.getElementById("result").innerText = "It's a tile!";
+    document.getElementById("result").innerText = "It's a tie!";
     document.getElementById("result").style.color = "blue";
   } else if(
     (playerSelection === "rock" && computerSelection === "scissors") ||
