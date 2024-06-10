@@ -1,0 +1,96 @@
+<html>
+<head>
+    <title>Website Counter</title>
+    <link href="./style.css" rel="stylesheet">
+    <link href="./fontawesome/css/all.css" rel="stylesheet">
+</head>    
+
+<body>
+    <div class="container">
+        <div class="addButtonContainer">
+            <button onclick="openForm()">Add</button>
+        </div>
+     <div class="noteContainer">
+
+        <div class="note">
+            <div class="buttonContainer">
+                <div class="noteType">Home</div>
+
+                <div class="iconContainer">
+                    <i class="fas fa-edit"></i>
+                    <i class="fas fa-trash"></i>    
+                </div>
+            </div>
+            <div class="title">
+               Finish the task on the board
+            </div>
+            <div class="bodyText">
+                note body r fhdfhd dfhd dfhdfhdfhdf hd               
+                 note body r fhdfhd dfhd dfhdfhdfhdf hd
+                 note body r fhdfhd dfhd dfhdfhdfhdf hd
+                 note body r fhdfhd dfhd dfhdfhdfhdf hdkkkkkkkkkkkoooooooooooooo
+                 note body r fhdfhd dfhd dfhdfhdfhdf hd
+                 qrqwrqwrqwrqwrq qwrq wrqwr qwrqw wr qwrqwr
+                 hdfhdf hdfhdf hdfhdf fdhdfh herutrirtiti
+
+             </div>
+             <div class="date">22.01.2023</div>
+
+        </div>
+
+ 
+       
+        </div>
+    </div>
+
+    <div class="addNote">
+        <div class="closeButton">
+            <i class="fas fa-window-close"></i>  
+
+        </div>
+        <div>
+            <span>Title</span>
+            <input type="text" id="noteTitle">
+        </div>
+        <div>
+            <span>Body</span>
+            <textarea  id="noteBody" ></textarea>
+        </div>
+        <div>
+            <span>Type</span>
+            <select name="notes" id="noteType">
+                <option value="Home">Home</option>
+                <option value="Personal">Personal</option>
+                <option value="Business">Business</option>
+            </select>
+        </div>
+        <div>
+            <!-- <button onclick="createNote()">Submit</button> -->
+            <input type="submit" onclick="createNote()">
+        </div>
+                
+    </div>
+    <div class="note noteDetailView">
+        <div class="buttonContainer">
+            <div class="noteType">Home</div>
+
+            <div class="iconContainer closeDetailView">
+                <i class="fas fa-close"></i>
+            </div>
+        </div>
+        <div class="title">
+           Finish the task on the board
+        </div>
+        <div class="bodyText zoomed">
+            note body r fhdfhd dfhd dfhdfhdfhdf hd               
+             note body r fhdfhd dfhd dfhdfhdfhdf hd
+             note body r fhdfhd dfhd dfhdfhdfhdf hd
+             note body r fhdfhd dfhd dfhdfhdfhdf hdkkkkkkkkkkkoooooooooooooo
+             note body r fhdfhd dfhd dfhdfhdfhdf hd
+         </div>
+         <div class="date"></div>
+
+    </div>
+    <script src="main.js"> </script>
+</body>
+</html>
