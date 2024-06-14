@@ -3,9 +3,8 @@ body{
   align-items: baseline;
   justify-content: center;
   width: 99vw;
-
 }
-.container {
+.container,.addButtonContainer {
   display: flex;
   flex-wrap:wrap;
   align-items: center;
@@ -14,17 +13,9 @@ body{
   background-color: whitesmoke;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-
 }
 .addButtonContainer {
-  display: flex;
-  flex-wrap:wrap;
-  align-items: center;
-  font-family: Arial, Helvetica, sans-serif;
   width: 100%;
-  background-color:whitesmoke;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
   justify-content: right;
 }
 button{
@@ -38,7 +29,6 @@ button{
   margin-right: 40px;
   margin-top:7px;
   margin-bottom:7px;
-
 }
 .noteContainer {
   display: flex;
@@ -47,22 +37,16 @@ button{
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
   background-color: #ebebeb;
-
 }
 .note {
   display: flex;
   flex: 0 1 22%;
-
   flex-direction: column;
-  /* width: 25vw;
-  height: 25vh; */
   background-color: white;
-  /* border: 1px solid lightgrey; */
   border-radius: 10px;
   padding: 2px;
   margin: 10px;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
-
 }
 .buttonContainer {
   display: flex;
@@ -100,20 +84,18 @@ button{
   font-size: 11px;
   margin-top: 15px;
   margin-bottom: 15px;
-
 }
 .fas,.far {
   margin-right: 18px;
   font-size: 11px;
   color: #737373;
   cursor: pointer;
-
 }
-.noteType {
+.noteType{
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius:20px;
+  border-radius: 20px;
   background-color: #70bf70;
   color: whitesmoke;
   font-size: 10px;
@@ -121,44 +103,38 @@ button{
   height: 3vh;
   margin-left: 10px;
 }
-
-.home {
+.home{
   background-color: #70bf70;
 }
-.business {
+.business{
   background-color: #7c56e5;
 }
-.personal {
+.personal{
   background-color: #e55094;
 }
-
-
-.addNote {
-  display:none;
+.addNote{
+  display: none;
   flex-direction: column;
   position: absolute;
   justify-content: space-evenly;
   align-items: center;
-  width: 35vw;
-  height: 65vh;
+  width: 50vw;
+  height: 80vh;
   background-color: whitesmoke;
   border-radius: 10px;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
-
 }
 .addNote div {
   display: flex;
   flex-direction: column;
 }
-.closeButton {
+.closeButton{
   align-items: end;
   width: 100%;
 }
 .closeButton .fas {
   font-size: 18px;
-
 }
-
 span {
   width: 4vw;
   margin-bottom: 10px;
@@ -168,39 +144,36 @@ input,select,textarea {
   border: none;
   border-radius: 5px;
   height: 30px;
-  width:28vw;
+  width: 40vw;
   outline: none;
 }
 textarea{
-  border-radius: 5px;
-  outline: none;
   resize: none;
   height: 120px;
 }
- input[type=submit] {
-  width: 28vw;
-  background: #30bef3;
+input[type=submit] {
+  width: 40vw;
+  background-color: #30bef3;
   color: whitesmoke;
   cursor: pointer;
- }
-
- .noteDetailView {
+}
+.noteDetailView {
   display: none;
   flex-direction: column;
   position: absolute;
-  align-items: center;
   width: 35vw;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
- }
- .zoomed {
-  overflow:auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.detailView{
+  overflow: auto;
   height: 30vh;
- }
-
-@media screen and (max-width: 976px) {
-  .note {
-    flex: 0 1 45%;
+}
+@media screen and (max-width:976px) {
+  .note{
+    flex:0 1 45%;
   }
 }
