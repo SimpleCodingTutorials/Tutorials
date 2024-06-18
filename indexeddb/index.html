@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Note App</title>
+    <link href="./style.css" rel="stylesheet">
+    <link href="./fontawesome/css/all.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/4.0.7/dexie.min.js" integrity="sha512-882VotT07mOQRzqIxsyxHzJX0XUaoeee3qXp4THg1A0KI0XFnWFAaLFQm0x6OW3pHSIipVZW+gzQ1w9b6uvkVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>    
+
+<body>
+     <div class="container">
+        <div class="addButtonContainer">
+            <button onclick="openForm()">Add Note</button>
+        </div>
+        <div class="noteContainer">
+          
+    
+        </div>
+     </div>
+     <div class="addNote">
+        <div class="closeButton">
+            <i class="fas fa-window-close"></i>
+        </div>
+        <div>
+            <span>Title</span>
+            <input type="text" id="noteTitle"/>
+        </div>
+        <div>
+            <span>Body</span>
+            <textarea id="noteBody"></textarea>
+        </div>
+        <div>
+            <span>Type</span>
+            <select name="notes" id="noteType">
+                <option value="Home" selected="true">Home</option>
+                <option value="Personal">Personal</option>
+                <option value="Business">Business</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" onclick="createNote()" />
+        </div>
+     </div>
+     <div class="note noteDetailView">
+        <div class="buttonContainer">
+            <div class="noteType">Home</div>
+            <div class="iconContainer closeDetailView">
+                <i class="fas fa-window-close"></i>
+            </div>
+        </div>
+        <div class="title"></div>
+        <div class="bodyText detailView"></div>
+        <div class="date"></div>
+     </div>
+    <script src="main.js"> </script>
+</body>
+</html>

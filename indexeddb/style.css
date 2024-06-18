@@ -1,0 +1,179 @@
+body{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 99vw;
+}
+.container,.addButtonContainer {
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 95%;
+  background-color: whitesmoke;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.addButtonContainer {
+  width: 100%;
+  justify-content: right;
+}
+button{
+  background-color: #30bef3;
+  color: whitesmoke;
+  width: 90px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-right: 40px;
+  margin-top:7px;
+  margin-bottom:7px;
+}
+.noteContainer {
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  background-color: #ebebeb;
+}
+.note {
+  display: flex;
+  flex: 0 1 22.4%;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2px;
+  margin: 10px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+}
+.buttonContainer {
+  display: flex;
+  width: 100%;
+  background-color: white;
+  height: 4vh;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:5px;
+}
+.title {
+  display: flex;
+  width: 90%;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  overflow: hidden;
+}
+.bodyText {
+  display: flex;
+  width: 90%;
+  height: 5vh;
+  font-size: 10px;
+  margin-left: 10px;
+  margin-top: 5px;
+  color: #505050;
+  overflow: hidden;
+}
+.date {
+  display: flex;
+  justify-content: right;
+  color: #838181;
+  width: 95%;
+  font-size: 11px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.fas,.far {
+  margin-right: 18px;
+  font-size: 11px;
+  color: #737373;
+  cursor: pointer;
+}
+.noteType{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #70bf70;
+  color: whitesmoke;
+  font-size: 10px;
+  width: 5vw;
+  height: 3vh;
+  margin-left: 10px;
+}
+.home{
+  background-color: #70bf70;
+}
+.business{
+  background-color: #7c56e5;
+}
+.personal{
+  background-color: #e55094;
+}
+.addNote{
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50vw;
+  height: 80vh;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+}
+.addNote div {
+  display: flex;
+  flex-direction: column;
+}
+.closeButton{
+  align-items: end;
+  width: 100%;
+}
+.closeButton .fas {
+  font-size: 18px;
+}
+span {
+  width: 4vw;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+input,select,textarea {
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 40vw;
+  outline: none;
+}
+textarea{
+  resize: none;
+  height: 120px;
+}
+input[type=submit] {
+  width: 40vw;
+  background-color: #30bef3;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.noteDetailView {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  width: 35vw;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.detailView{
+  overflow: auto;
+  height: 30vh;
+}
+@media screen and (max-width:976px) {
+  .note{
+    flex:0 1 45%;
+  }
+}
