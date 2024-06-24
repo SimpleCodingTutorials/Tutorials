@@ -1,0 +1,84 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 31vw;
+}
+.board{
+  display: flex;
+  flex-wrap: wrap;
+  height: 30vw;
+  width: 33vw;
+  justify-content: center;
+  align-items: center;
+}
+.cell{
+  width: 10vw;
+  height: 10vw;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  cursor: pointer;
+}
+ .cell.x {
+  color:#ff0061;
+ }
+ .cell.o{
+  color: #49c396;
+ }
+ .winning-message {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(233,233,233,0.8);
+  color: #ff006a;
+  position: absolute;
+  width: 27vw;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 30px;
+ }
+ .winning-message.show {
+  display: flex;
+ }
+ button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  background-color: transparent;
+  color: #49c396;
+ }
+.buttonContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 5px;
+  width: 97.5%;
+  margin-top: 10px;
+}
+.board.o .cell:hover{
+  background-color: #49c39617;
+}
+.board.x .cell:hover{
+  background-color: #ff00620f;
+}
