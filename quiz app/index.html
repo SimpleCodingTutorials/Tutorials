@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="categories"></div>
+    <div class="controlContainer">
+      <button id="start" onclick="startQuiz()">Start Quiz</button>
+      <div>
+        <label>Difficulty: </label>
+        <select id="difficulty" onchange="selectDifficulty()">
+          <option value="easy">
+            Easy
+          </option>
+          <option value="medium">
+            Medium
+          </option>
+          <option value="hard">
+            Hard
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="quizContainer">
+      <div id="counter"></div>
+      <div id="question" class="question"></div>
+      <ul id="options" class="options">      
+      </ul>
+      <div class="scoreContainer">
+        <div>Quiz completed!</div>
+        <div id="score" class="score"></div>
+        <button id="returnButton" onclick="reset()">Return</button>
+      </div>
+    </div>
+
+    
+
+
+
+    <script src="main.js"></script>
+  </body>
+</html>
