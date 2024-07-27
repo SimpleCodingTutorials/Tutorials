@@ -50,6 +50,8 @@ class Pacman extends Phaser.Scene {
     });
     this.pacman.play("pacmanAnim");
     this.dots = this.physics.add.group();
+    this.physics.add.overlap(this.pacman,this.dots,this.eatDot,null,this);
+
     this.populateBoardAndTrackEmptyTiles(layer);
   }
   populateBoardAndTrackEmptyTiles(layer) {
@@ -71,7 +73,9 @@ class Pacman extends Phaser.Scene {
 
     });
   }
-
+  eatDot(pacman,dot) {
+    dot.disableBody(true,true);
+  }
   update() {
 
   }
