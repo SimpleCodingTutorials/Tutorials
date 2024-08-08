@@ -1,11 +1,28 @@
-const puppeteer = require("puppeteer");
-(async()=>{
-        const browser = await puppeteer.launch({
-            executablePath: 'D:\\Downloads\\chrome-win64\\chrome.exe'
-        });
-    const page = await browser.newPage();
-    await page.goto("https://en.wikipedia.org/wiki/Main_Page");
+const puppeteer = require('puppeteer');
 
-    await page.screenshot({path:"screenshot.png",fullPage:true});
+(async () => {
+    const browser = await puppeteer.launch({
+
+    });
+    const page = await browser.newPage();
+    await page.goto('https://google.com'); 
+
+    const elementSelector = '.lnXdpd'; 
+
+    await page.waitForSelector(elementSelector, { timeout: 10000 });
+    
+    const element = await page.$(elementSelector);
+    const boundingBox = await element.boundingBox();
+
+    await page.screenshot({
+        path: 'element-screenshot.png',
+        clip: {
+            x: boundingBox.x,
+            y: boundingBox.y,
+            width: boundingBox.width,
+            height: boundingBox.height
+        }
+    });
+
     await browser.close();
 })();
