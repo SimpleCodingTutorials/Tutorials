@@ -1,0 +1,101 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: indigo;
+  flex-direction: column;
+}
+
+.memory-game {
+  width: 37vw;
+  height: 37vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  place-items: center;
+  margin: 10px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face, .back-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+.front-face img {
+  width: 100%;
+}
+.back-face {
+  background-color: #ecf0f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.back-face img {
+  width: 100%;
+  height: 100%;
+}
+.winning-message {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(233,233,233,0.8);
+  color: #ff006a;
+  position: absolute;
+  width: 30vw;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  z-index: 1000;
+ }
+ .winning-message.show {
+  display: flex;
+ }
+
+ #resetButton {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: x-large;
+  color:darkcyan;
+ }
+ #moveCounter {
+  color: whitesmoke;
+ }
+ #timer {
+  color: whitesmoke;
+  width: 140px;
+
+ }
+ .gameInfo {
+  display: flex;
+  justify-content: space-between;
+  width: 37vw;
+  font-size: x-large;
+  font-weight: bold;
+ }
