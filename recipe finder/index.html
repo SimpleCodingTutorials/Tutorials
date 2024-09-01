@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+
+</head>
+<body>
+
+    <h1>Recipe Finder</h1>
+    <div id="search-form">
+        <input type="text" id="query" placeholder="Search for recipes...">
+        <button id="search-button" onclick="searchRecipes()">Search</button>
+    </div>
+    <div id="results"></div>
+    <div id="recipe-details">
+        <div id="statusBar">
+            <span>
+                <i id="close-button" onclick="closeRecipeDetails()" class="fas fa-window-close"></i>
+            </span>
+        </div>
+        <div id="recipe-content"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
