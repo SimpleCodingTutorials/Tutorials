@@ -1,0 +1,79 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1,h2 {
+  text-align: center;
+}
+form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+button {
+  padding: 10px;
+  background-color: slateblue;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #4b37c5;
+}
+td button {
+  width: 100%;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th,td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+th{
+  background-color: gold;
+}
+.tooltip {
+  display: flex;
+  position: absolute;
+  background-color: white;
+  text-align: center;
+  align-items: center;
+  border: 1px solid darkgray;
+  height: 40px;
+  border-radius: 6px;
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.fa-circle-exclamation{
+  font-size: x-large;
+  color: #ff8d14;
+  margin-right: 7px;
+}
