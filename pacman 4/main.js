@@ -19,10 +19,10 @@ class Pacman extends Phaser.Scene {
 
     this.scatterModeDuration = 7000;
     this.chaseModeDuration = 20000;
-    this.scaredModeDuration = 9000;
     this.entryDelay = 7000;
     this.respawnDelay = 5000;
     this.modeTimer = null;
+    //this.modeStartTime = Date.now();
     this.currentMode = "scatter";
     this.initModeTimers();
   }
@@ -41,31 +41,40 @@ class Pacman extends Phaser.Scene {
   }
 
   switchMode() {
-   if(this.currentMode === "scared") {
-    this.currentMode = this.previouseMode || "scatter";
-    this.setModeTimer(this[this.currentMode+"ModeDuration"]);
-    this.ghostSpeed = this.speed*0.7;
-    this.ghosts.forEach(ghost => {
-      clearInterval(ghost.blinkInterval);
-      ghost.setTexture(ghost.originalTexture);
-      let target = this.currentMode === "chase" ? this.getChaseTarget(ghost) : this.getScatterTarget(ghost);
-      this.updateGhostPath(ghost,target);
-    });
-   } else {
-      if(this.currentMode === "scatter") {
-        this.currentMode = "chase";
-        this.setModeTimer(this.chaseModeDuration);
-      } else {
-        this.currentMode = "scatter";
-        this.setModeTimer(this.scatterModeDuration);
-      }
-      this.ghosts.forEach(ghost => {
-        let target = this.currentMode === "chase" ? this.getChaseTarget(ghost) : this.getScatterTarget(ghost);
-        this.updateGhostPath(ghost,target);
-      });
-      this.previouseMode = this.currentMode;
-   }
-}
+    if(this.currentMode === "scatter") {
+      this.currentMode = "chase";
+      this.setModeTimer(this.chaseModeDuration);
+
+      let blinkyChaseTarget = this.getChaseTarget(this.redGhost);
+      this.updateGhostPath(this.redGhost,blinkyChaseTarget);
+
+      let pinkyChaseTarget = this.getChaseTarget(this.pinkGhost);
+      this.updateGhostPath(this.pinkGhost,pinkyChaseTarget);
+
+      let clydeChaseTarget = this.getChaseTarget(this.orangeGhost);
+      this.updateGhostPath(this.orangeGhost,clydeChaseTarget);
+
+      let inkyChaseTarget = this.getChaseTarget(this.blueGhost);
+      this.updateGhostPath(this.blueGhost,inkyChaseTarget);
+
+    } else {
+      this.currentMode = "scatter";
+      this.setModeTimer(this.scatterModeDuration);
+
+      let blinkyChaseTarget = this.BLINKY_SCATTER_TARGET;
+      this.updateGhostPath(this.redGhost,blinkyChaseTarget);
+
+      let pinkyChaseTarget = this.PINKY_SCATTER_TARGET;
+      this.updateGhostPath(this.pinkGhost,pinkyChaseTarget);
+
+      let clydeChaseTarget = this.CLYDE_SCATTER_TARGET;
+      this.updateGhostPath(this.orangeGhost,clydeChaseTarget);
+
+      let inkyChaseTarget = this.INKY_SCATTER_TARGET;
+      this.updateGhostPath(this.blueGhost,inkyChaseTarget);
+    } 
+    //this.modeStartTime = Date.now();
+  }
   
   getChaseTarget(ghost) {
     //let chaseTarget = null;
@@ -117,23 +126,7 @@ class Pacman extends Phaser.Scene {
 
       return {x:blinky.x+2*vectorX,y:blinky.y+2*vectorY};
     }
-  }
-
-  getScaredTarget(ghost) {
-    let randomIndex = Math.floor(Math.random()*this.intersections.length);
-    let randomIntersection = this.intersections[randomIndex];
-    return {x:randomIntersection.x,y:randomIntersection.y};
-  }
- 
-  getScatterTarget(ghost) {
-    if(ghost.texture.key === "redGhost")
-      return this.BLINKY_SCATTER_TARGET;
-    if(ghost.texture.key === "pinkGhost")
-      return this.PINKY_SCATTER_TARGET;
-    if(ghost.texture.key === "orangeGhost")
-      return this.CLYDE_SCATTER_TARGET;
-    if(ghost.texture.key === "blueGhost")
-      return this.INKY_SCATTER_TARGET;
+    //return chaseTarget;
   }
 
   updateGhostPath(ghost,chaseTarget) {
@@ -166,10 +159,7 @@ class Pacman extends Phaser.Scene {
     this.load.spritesheet("pacman4","pacman characters/pacman/pacman4.png",{
       frameWidth:32,frameHeight:32
     });
-
     this.load.image("dot","pacman items/dot.png");
-    this.load.image("powerPill","pacman items/spr_power_pill_0.png");
-
 
     this.load.spritesheet("pinkGhost","ghost/pink ghost/spr_ghost_pink_0.png",{
       frameWidth:32,frameHeight:32
@@ -183,12 +173,7 @@ class Pacman extends Phaser.Scene {
     this.load.spritesheet("redGhost","ghost/red ghost/spr_ghost_red_0.png",{
       frameWidth:32,frameHeight:32
     });
-    this.load.spritesheet("scaredGhost","ghost/ghost afraid/spr_afraid_0.png",{
-      frameWidth:32,frameHeight:32
-    });
-    this.load.spritesheet("scaredGhostWhite","ghost/ghost afraid/spr_afraid_1.png",{
-      frameWidth:32,frameHeight:32
-    });
+    
 
   }
   create() {
@@ -212,10 +197,8 @@ class Pacman extends Phaser.Scene {
     this.pacman.play("pacmanAnim");
     this.physics.add.collider(this.pacman,layer);
     this.dots = this.physics.add.group();
-    this.powerPills = this.physics.add.group();
     this.populateBoardAndTrackEmptyTiles(layer);
     this.physics.add.overlap(this.pacman,this.dots,this.eatDot,null,this);
-    this.physics.add.overlap(this.pacman,this.powerPills,this.eatPowerPill,null,this);
     this.cursors = this.input.keyboard.createCursorKeys();
     this.detectIntersections();
     this.initializeGhosts(layer);
@@ -231,8 +214,8 @@ class Pacman extends Phaser.Scene {
 
     this.redGhost.path = this.aStarAlgorithm(startPoint,this.BLINKY_SCATTER_TARGET);
     this.redGhost.nextIntersection = this.redGhost.path.shift();
+    
     }
-
   initializeGhosts(layer) {
     this.pinkGhost = this.initializeGhost(232,290,"pinkGhost",layer);
     this.orangeGhost = this.initializeGhost(210,290,"orangeGhost",layer);
@@ -241,7 +224,6 @@ class Pacman extends Phaser.Scene {
     this.ghosts = [this.pinkGhost,this.orangeGhost,this.redGhost,this.blueGhost];
     this.startGhostEntries();
   }
-
   startGhostEntries() {
     this.ghosts.forEach((ghost,index)=>{
       setTimeout(()=>{
@@ -249,7 +231,6 @@ class Pacman extends Phaser.Scene {
       },this.entryDelay*index);
     });
   }
-
   enterMaze(ghost) {
     ghost.setPosition(232,280);
     ghost.enteredMaze = true;
@@ -257,7 +238,6 @@ class Pacman extends Phaser.Scene {
   initializeGhost(x,y,spriteKey,layer) {
     const ghost = this.physics.add.sprite(x,y,spriteKey);
     this.physics.add.collider(ghost,layer);
-    ghost.originalTexture = spriteKey;
     ghost.direction = "right";
     ghost.previousDirection = "right";
     ghost.nextIntersection = null;
@@ -388,41 +368,11 @@ class Pacman extends Phaser.Scene {
         const y = tile.y*tile.height;
         this.dots.create(x+tile.width,y+tile.height,"dot");
       }
-    });
 
-    this.powerPills.create(32,144,"powerPill");
-    this.powerPills.create(432,144,"powerPill");
-    this.powerPills.create(32,480,"powerPill");
-    this.powerPills.create(432,480,"powerPill");
+    });
   }
   eatDot(pacman,dot) {
     dot.disableBody(true,true);
-  }
-
-  eatPowerPill(pacman,powerPill) {
-    powerPill.disableBody(true,true);
-    this.currentMode = "scared";
-    this.setGhostsToScaredMode();
-    this.setModeTimer(this.scaredModeDuration);
-    this.ghostSpeed = this.speed*0.5;
-  }
-
-  setGhostsToScaredMode() {
-    this.ghosts.forEach(ghost=> {
-      let scaredTarget = this.getScaredTarget();
-      this.updateGhostPath(ghost,scaredTarget);
-      if(ghost.blinkInterval)
-        clearInterval(ghost.blinkInterval);
-      const blinkTime = this.scaredModeDuration - 2000;
-      ghost.blinkInterval = setTimeout(()=> {
-        let blinkOn = true;
-        ghost.blinkInterval = setInterval(()=>{
-          blinkOn = !blinkOn;
-          ghost.setTexture(blinkOn ? "scaredGhost" : "scaredGhostWhite");
-        },200);
-      },blinkTime);
-      ghost.setTexture("scaredGhost");
-    });
   }
 
   detectIntersections() {
@@ -619,6 +569,7 @@ class Pacman extends Phaser.Scene {
     }
   }
  
+
   changeDirection(flipX,flipY,angle,velocityX,velocityY) {
 
     this.pacman.setFlipX(flipX);
@@ -669,15 +620,12 @@ class Pacman extends Phaser.Scene {
       if(ghost.path.length>0) {
         ghost.nextIntersection = ghost.path.shift();
       }
-      if(ghost.path.length ==0 && this.currentMode === "scared") {
-        let scaredTarget = this.getScaredTarget();
-        this.updateGhostPath(ghost,scaredTarget);
-      }
       let newDirection = this.getGhostNextDirection(ghost,ghost.nextIntersection);
       ghost.previousDirection = ghost.direction;
       ghost.direction = newDirection;
     }
   }
+
 
  adjustGhostPosition(ghost) {
   if(ghost.x%this.blockSize!==0){
