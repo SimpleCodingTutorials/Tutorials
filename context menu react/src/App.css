@@ -1,0 +1,56 @@
+.context-menu {
+  position: absolute;
+  list-style-type:none;
+  padding: 5px;
+  margin: 0;
+  width: 250px;
+  background-image: linear-gradient(to right top, #0b0b0b,#1f1f1f,#323232,#454545,#5a5a5a);
+  color: white;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5), inset 0px -3px 6px -2px rgba(0,0,0,0.3);
+}
+
+.context-menu li {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: relative;
+  transition: bakground-color 0.3 ease;
+}
+.context-menu li:hover {
+  background-color: #555;
+}
+.context-menu li img{
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}
+.submenu{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 250px;
+  background-image: linear-gradient(to right top, #0b0b0b,#1f1f1f,#323232,#454545,#5a5a5a);
+  padding: 4px;
+  list-style-type: none;
+  width: 150px;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5), inset 0px -3px 6px -2px rgba(0,0,0,0.3);
+  color: white;
+}
+.has-submenu::after {
+  content: '▶';
+  position: absolute;
+  right: 10px;
+  font-size: 12px;
+  color: white;
+}
+.has-submenu:hover .submenu{
+  display: block;
+}
+
+.menu-divider {
+  border: none;
+  border-top: 1px solid lightgray;
+  margin: 5px 0;
+  opacity: 0.5;
+}
