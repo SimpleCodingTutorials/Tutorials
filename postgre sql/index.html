@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <form id="expense-form">
+            <input type="text" id="expense-name" placeholder="Expense Name" required>
+            <input type="number" step="0.01" id="expense-amount" placeholder="Amount" required>
+            <input type="date" id="expense-date" required>
+            <button type="submit">Add Expense</button>
+        </form>
+        <table id="expense-table">
+            <thead>
+                <tr>
+                    <th>Expense Name</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Delete</th>
+
+                </tr>
+            </thead>
+            <tbody id="expense-list"></tbody>
+        </table>
+        <h2>Total: $<span id="total-amount">0</span></h2>
+    </div>
+    <script src="main.js" type="module"></script>
+    <script src="database.js" type="module"></script>
+
+</body>
+</html>
