@@ -1,0 +1,87 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+  font-family: sans-serif;
+}
+h1{
+  margin-bottom: 20px;
+  font-size: 2em;
+  color:#333;
+}
+.quote-box {
+  background-color: #fff;
+  border-radius: 8px;
+  padding:20px;
+  width:450px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+.quote-text{
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color:black;
+}
+.quote-author{
+  font-size:1em;
+  font-weight: bold;
+  color:#888;
+  text-align: right;
+  font-style: italic;
+  margin-right: 5px;
+}
+.new-quote-button {
+  padding:10px 20px;
+  font-size:1em;
+  background-color: lightseagreen;
+  color:whitesmoke;
+  border:none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.new-quote-button:hover{
+  background-color: mediumaquamarine;
+}
+hr{
+  border-color: #d3d3d35e;
+}
+.control-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 20px;
+}
+.icon-container{
+  display: flex;
+}
+.share-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  color: black;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  border: 2px solid;
+  margin: 4px;
+}
+.x-icon {
+  background-color: black;
+}
+.share-button img {
+  width: 65%;
+  height: 65%;
+}
+.copied-message {
+  display: flex;
+  align-items: center;
+  color:#4CAF50;
+  font-size: 0.9em;
+  font-weight: bold;
+}
