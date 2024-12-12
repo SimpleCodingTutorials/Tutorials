@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+#scoreContainer {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 600px;
+  height: 60px;
+  background-color: #4a752c;
+  color:whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding: 20px;
+}
+#scoreNumber {
+  margin-left: 5px;
+  font-size: 20px;
+}
+#startGame {
+  background-color: #15c;
+  color: white;
+  width: 280px;
+  height: 40px;
+  border:none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+#gameControlPanel{
+  position: absolute;
+  display: none;
+}
+#gameMessage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  background-image: url("./assets/startscene.png");
+  background-size: cover;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
