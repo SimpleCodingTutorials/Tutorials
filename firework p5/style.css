@@ -1,0 +1,16 @@
+body{
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("space.jpeg");
+  background-size: cover;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
