@@ -1,62 +1,64 @@
-const telegramAuthToken = `7067088005:AAFarqGcXcpfpQjNLxfietko-57TYLiQn6w`;
-const webhookEndpoint = "/endpoint";
+const { TelegramClient } = require('gramjs');
+const { StringSession } = require('gramjs/sessions');
+const { Api } = require('gramjs');
+const readline = require('readline');
 
-addEventListener("fetch", event => {
-  event.respondWith(handleIncomingRequest(event));
+// Replace with your actual API credentials
+const apiId = 1234567; 
+const apiHash = 'your_api_hash'; 
+const stringSession = new StringSession('');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
 });
 
-async function handleIncomingRequest(event) {
-  let url = new URL(event.request.url);
-  let path = url.pathname;
-  let method = event.request.method;
-  let workerUrl = `${url.protocol}//${url.host}`;
-
-  if (method === "POST" && path === webhookEndpoint) {
-    const update = await event.request.json();
-    event.waitUntil(processUpdate(update));
-    return new Response("Ok");
-  } else if (method === "GET" && path === "/configure-webhook") {
-    const url = `https://api.telegram.org/bot${telegramAuthToken}/setWebhook?url=${workerUrl}${webhookEndpoint}`;
-    const response = await fetch(url);
-
-    if (response.ok) {
-      return new Response("Webhook set successfully", { status: 200 });
-    } else {
-      return new Response("Failed to set webhook", { status: response.status });
-    }
-  } else {
-    return new Response("Not found", { status: 404 });
-  }
+async function promptForInput(question) {
+  return new Promise(resolve => {
+    rl.question(question, resolve);
+  });
 }
 
-async function processUpdate(update) {
-  if ("message" in update) {
-    const chatId = update.message.chat.id;
-    const userText = update.message.text;
+async function main() {
+  // Get dynamic inputs for URL and recipient
+  const link = await promptForInput("Please enter the URL to send: ");
+  const recipient = await promptForInput("Please enter the recipient username or chat_id: ");
 
-    if (isValidUrl(userText)) {
-      const formData = new FormData();
-      formData.append("chat_id", chatId);
-      formData.append("document", userText); // Directly send the file URL to Telegram
-
-      const url = `https://api.telegram.org/bot${telegramAuthToken}/sendDocument`;
-      await fetch(url, {
-        method: "POST",
-        body: formData
+  // Initialize Telegram client
+  const client = new TelegramClient(stringSession, apiId, apiHash);
+  
+  // Start client with necessary authentication steps
+  await client.start({
+    phoneNumber: async () => {
+      return new Promise(resolve => {
+        rl.question('Please enter your phone number: ', resolve);
       });
-    } else {
-      const responseText = "Invalid URL!";
-      const url = `https://api.telegram.org/bot${telegramAuthToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(responseText)}`;
-      await fetch(url);
-    }
+    },
+    password: async () => {
+      return new Promise(resolve => {
+        rl.question('Please enter your 2FA password (if you have one): ', resolve);
+      });
+    },
+    phoneCode: async () => {
+      return new Promise(resolve => {
+        rl.question('Please enter the code you received: ', resolve);
+      });
+    },
+    onError: (err) => console.log(err),
+  });
+
+  console.log("Successfully connected to Telegram");
+
+  // Send a message with the provided URL to the specified recipient
+  try {
+    const result = await client.sendMessage(recipient, { message: `Here is your link: ${link}` });
+    console.log('Message sent:', result);
+  } catch (err) {
+    console.error('Error sending message:', err);
   }
+
+  // Save session string for future use
+  console.log("Your session string is:", client.session.save());
 }
 
-function isValidUrl(string) {
-  try {
-    new URL(string);
-    return true;
-  } catch (_) {
-    return false;
-  }
-}
+main().catch(console.error);
