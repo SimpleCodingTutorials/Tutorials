@@ -1,7 +1,7 @@
 export default {
     async fetch(request) {
         const url = new URL(request.url);
-        const apiKey = "833f6523050c4c6c8f37a66580af5dd8";
+        const apiKey = "1234567890";
         const spoonacularBaseUrl = "https://api.spoonacular.com";
         let targetUrl;
 
