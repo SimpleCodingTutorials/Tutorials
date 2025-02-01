@@ -1,0 +1,134 @@
+body{
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+  background-color: #4a3d3d;
+  color: whitesmoke;
+}
+#search-form {
+  display: flex;
+  outline: none;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 35px;
+}
+#search-form input {
+  outline: none;
+  width: 30vw;
+  border-radius: 35px;
+  border:none;
+  padding: 15px;
+  font-size: 16px;
+}
+#search-button {
+  border-radius: 35px;
+  border: none;
+  height: 50px;
+  width: 120px;
+  background-image: linear-gradient(180deg,rgba(255,247,47,1),rgba(225,170,40,1));
+  color: #341919;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25);
+}
+#results {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap:20px
+}
+.recipe-item{
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+  background-color: #efebe9;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.35);
+}
+.recipe-item img {
+  max-width: 100%;
+  height: auto;
+}
+.recipe-item a {
+  color:maroon;
+}
+
+#recipe-details {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 60vw;
+  background-color: #333333;
+}
+
+#recipe-content {
+  padding: 20px;
+  height: 70vh;
+  overflow-y: auto;
+  text-align: center;
+}
+#recipe-content p,#recipe-content li {
+  text-align: left;
+}
+#recipe-content::-webkit-scrollbar{
+  width: 12px;
+}
+#recipe-content::-webkit-scrollbar-thumb{
+  background-color: #595454;
+  border-radius: 10px;
+}
+#recipe-content::-webkit-scrollbar-track{
+  background: #9b9999;
+  border-radius: 5px;
+}
+#recipe-content::-webkit-scrollbar-thumb:hover{
+  background-color: #6f6e6e;
+}
+#statusBar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: #545447;
+  height: 2vh;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#close-button {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
