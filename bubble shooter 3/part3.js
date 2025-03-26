@@ -33,7 +33,7 @@ function preload() {
   this.load.image('yellow','assets/yellow.png');
   this.load.image('purple','assets/purple.png');
   this.load.image('arrow','assets/arrow.png');
-  this.load.image('backgroundImage','assets/background2.png');
+  this.load.image('backgroundImage','assets/background.png');
   this.load.image('restartButtonImage','assets/restart.png');
   this.load.audio('bubblepop','assets/bubble.mp3');
   this.load.audio('bubbleshoot','assets/shoot.mp3');
