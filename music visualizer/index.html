@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Visualizer</title>
+  <link href="style.css" rel="stylesheet"></link>
+</head>
+<body>
+  <h1>Music Visualizer</h1>
+  <canvas id="visualizer" width="800" height="500"></canvas>
+  <div class="controlContainer">
+    <button id="customFileButton">Select Audio File</button>
+    <audio id="audio" controls></audio>
+    <div class="labelContainer">
+      <span id="fileName">No file selected</span>
+    </div>
+    <input type="file" id="fileInput" accept="audio/*" hidden />
+  </div>
+<script src="main.js"></script>
+</body>
+</html>
