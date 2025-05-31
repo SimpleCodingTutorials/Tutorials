@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#loader {
+  width: 200px;
+  height: 200px;
+}
+
+#main-content{
+  display: none;
+}
+
+.lottie-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
