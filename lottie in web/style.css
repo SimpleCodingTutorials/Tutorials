@@ -1,0 +1,26 @@
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5f5f5;
+  }
+  #loader {
+    width: 200px;
+    height: 200px;
+  }
+  #main-content {
+    display: none;
+    text-align: center;
+  }
+  .lottie-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+  }
