@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css" />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body>
+    <h1>Google Drive Files</h1>
+    <div class="controlContainer">
+      <div class="uploadControls">
+        <input type="file" id="fileInput" />
+        <label for="fileInput" class="custom-file-upload">Choose File</label>
+        <div id="uploadStatus"></div>
+        <div id="selectedFile">No file selected </div>
+        <button onclick="uploadFile()">Upload</button>  
+      </div>
+      <div class="signOutContainer">
+        <button id="signout" onclick="signOut()">Sign Out</button>
+      </div>
+    </div>
+    <table id="fileTable">
+      <thead>
+        <tr>
+          <th>File Name</th>
+          <th>Last Modified</th>
+          <th>Download</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+
+    <script src="./profile.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

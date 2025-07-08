@@ -1,0 +1,113 @@
+body {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #eaeaea;
+}
+
+.uploadControls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.controlContainer {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid darkgray;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: nowrap;
+}
+
+.signOutContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#signout {
+  background-color: white;
+  color: currentColor;
+  font-weight: bold;
+  width: 100px; /* Fixed width for Sign Out button */
+  height: 30px;
+  flex-shrink: 0; /* Prevent the Sign Out button from shrinking */
+}
+
+#fileInput {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  width: 100px; /* Fixed width for the Choose File button */
+  height: 30px;
+  background-color: darkslateblue;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 30px;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+button {
+  width: 100px; /* Fixed width for the Upload button */
+  height: 30px;
+  background-color: darkcyan;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+#selectedFile {
+  font-style: italic;
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden; /* Hide overflowed content */
+  text-overflow: ellipsis; /* Show ellipsis (...) for overflowed content */
+  flex-grow: 1; /* Allow file name to take remaining space */
+  max-width: 200px; /* Add a max-width to prevent file name from stretching too wide */
+  padding: 0 10px; /* Provide padding between file name and buttons */
+}
+
+#uploadStatus {
+   display: none;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    max-width: 200px;
+    padding: 0 10px;
+}
