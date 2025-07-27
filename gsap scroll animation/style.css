@@ -1,0 +1,37 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+header {
+    padding: 50px;
+    background: #333;
+    color: white;
+}
+
+.box {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    background: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.animate-text,.animate-img {
+    opacity: 1;
+    width: 40%;
+    margin: 2%;
+}
+
+
+.split-text {
+    font-size: 2em;
+    font-weight: bold;
+}
