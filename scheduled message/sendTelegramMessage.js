@@ -17,7 +17,6 @@ export default async function () {
     const data = await res.json();
   }
 }
-//7507475327:AAGLQjnVNc0ETsAso9h-eHiJgk1uhq3DaDE
 
 
 
