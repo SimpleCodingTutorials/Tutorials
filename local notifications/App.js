@@ -1,100 +1,60 @@
-import React, {use, useState} from "react";
-import {View,Button,Text,Platform} from "react-native";
-import DateTimePicker from "@react-native-community/datetimepicker";
+import React, { useEffect, useRef } from 'react';
+import { View, Button, Platform, Text } from 'react-native';
+import * as Notifications from 'expo-notifications';
+import * as Device from 'expo-device';
+
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: false,
+    shouldSetBadge: false,
+  }),
+});
 
 export default function App() {
-  const [date, setDate] = useState(new Date());
-  const [mode,setMode] = useState("date");
-  const [show, setShow] = useState(false);
+  const notificationListener = useRef();
+  const responseListener = useRef();
 
-  const onChange = (event, selectedDate) => {
-    setShow(Platform.OS === "ios");
-    if(selectedDate) setDate(selectedDate);
-  };
+  useEffect(() => {
+    registerForNotifications();
 
-  const showMode = (currentMode) => {
-    setMode(currentMode);
-    setShow(true);
-  };
+    notificationListener.current = Notifications.addNotificationReceivedListener(notification => {
+      console.log('Notification received:', notification);
+    });
+
+    responseListener.current = Notifications.addNotificationResponseReceivedListener(response => {
+      console.log('Notification tapped:', response);
+    });
+
+    return () => {
+      notificationListener.current?.remove();
+      responseListener.current?.remove();
+    };
+  }, []);
+
+  async function registerForNotifications() {
+    if (Device.isDevice && Platform.OS !== 'web') {
+      const { status } = await Notifications.getPermissionsAsync();
+      if (status !== 'granted') {
+        await Notifications.requestPermissionsAsync();
+      }
+    }
+  }
+
+  async function scheduleNotification() {
+    const triggerTime = new Date(Date.now() + 5000); 
+    await Notifications.scheduleNotificationAsync({
+      content: {
+        title: 'Hello!',
+        body: 'This is a local notification.',
+      },
+      trigger: triggerTime,
+    });
+  }
 
   return (
-    <View style={{flex:1,justifyContent:"center", alignItems:"center"}}>
-      <View style={{flexDirection: "row", gap: 10}}>
-        <Button title="Pick Date" onPress={()=> showMode("date")} />
-        <Button title="Pick Time" onPress={()=> showMode("time")} />
-      </View>
-      <Text style={{marginTop:20}}>{date.toLocaleString()}</Text>
-      {show && (
-        <DateTimePicker
-          value={date}
-          mode={mode}
-          is24Hour={true}
-          display="default"
-          onChange={onChange}
-        />
-      )}
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Button title="Schedule Notification" onPress={scheduleNotification} />
     </View>
   );
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// export default function App() {
-//   const [date, setDate] = useState(new Date());
-//   const [mode, setMode] = useState('date');
-//   const [show, setShow] = useState(false);
-
-//   const onChange = (event, selectedDate) => {
-//     setShow(Platform.OS === 'ios');
-//     if (selectedDate) setDate(selectedDate);
-//   };
-
-//   const showMode = (currentMode) => {
-//     setMode(currentMode);
-//     setShow(true);
-//   };
-
-//   return (
-//   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-//   <View style={{ flexDirection: 'row', gap: 10 }} >
-//     <Button title="Pick Date" onPress={() => showMode('date')} />
-//     <Button title="Pick Time" onPress={() => showMode('time')} />
-//   </View>
-
-//   <Text style={{ marginTop: 20 }}>{date.toLocaleString()}</Text>
-//       {show && (
-//         <DateTimePicker
-//           value={date}
-//           mode={mode}
-//           is24Hour={true}
-//           display="default"
-//           onChange={onChange}
-//         />
-//       )}
-// </View>
-
-//   );
-// }
