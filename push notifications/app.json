@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "pushNotificationsApp",
+    "slug": "pushNotificationsApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "plugins": ["expo-notifications"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "googleServicesFile": "./google-services.json",
+      "useNextNotificationsApi": true,
+      "edgeToEdgeEnabled": true,
+      "package": "com.sct2025.pushNotificationsApp"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "784rahb6-d96s-2i4b-m7cvc-z64582512g73j"
+      }
+    },
+    "owner": "sct2025"  
+  }
+}
