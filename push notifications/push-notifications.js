@@ -3,7 +3,7 @@ import {blob} from "https://esm.town/v/std/blob";
 export async function sendPushNotification() {
   let pushTokens: string[] = [];
   try{
-    const res = await fetch("https://sct--c04a76ea75d611f08a410224a6c84d84.web.val.run",{
+    const res = await fetch("https://sct--c04a76ea75d611f08a41022t638636fgtw34g678h.web.val.run",{
       method: "GET",
     });
     if(!res.ok) throw new Error("Failed to fetch tokens");

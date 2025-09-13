@@ -36,7 +36,7 @@ async function registerForPushNotificationsAsync(setToken) {
     const expoPushToken = tokenData.data;
 
     setToken(expoPushToken);
-    await fetch("https://sct--c04a76ea75d611f08a410224a6c84d84.web.val.run",{
+    await fetch("https://sct--c04a76ea75d611f08a41022t638636fgtw34g678h.web.val.run",{
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({expoPushToken}),
